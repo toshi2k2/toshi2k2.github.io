@@ -19,7 +19,7 @@ social: true # includes social icons at the bottom of the page
 <em>“No problem is too small or too trivial if we can really do something about it.”</em>
 
 Hi there! Welcome to my bio page!
-I am a 4th year Computer Science PhD student at Johns Hopkins University. I did my Bachelors in Electronics and Communications Engineering and have worked in a wide assortment of research areas such as robotics, biomedical imaging, AI hardware, signal processing, etc.
+I am a 4th year Computer Science PhD student at Johns Hopkins University.
 
 My current work involves intersection of unsupervised learning, 3D generative models, continual learning, domain adaptation, and model robustness. I also dabble in causal inference and optimal transport. My research revolves around using cognitive computational vision concepts for solving signal processing and machine learning problems especially related to computer vision and graphics.
 
