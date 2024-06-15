@@ -5,7 +5,7 @@ inline: true
 related_posts: false
 ---
 
-My (first authored) is accepted at ICLR 2024! See you all in Vienna!<a href="https://arxiv.org/abs/2401.10848">paper</a>.
+My (first authored) [paper](https://arxiv.org/abs/2401.10848) is accepted at ICLR 2024! See you all in Vienna!
 <!-- ---
 layout: post
 title: A long announcement with details

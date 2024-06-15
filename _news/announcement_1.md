@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-My (first authored) is accepted at CVPR 2024! See you all in Seattle!<a href="https://arxiv.org/abs/2403.07277">paper</a>.
+My (first authored) [paper](https://arxiv.org/abs/2403.07277) is accepted at CVPR 2024! See you all in Seattle!
