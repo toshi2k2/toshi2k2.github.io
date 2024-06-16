@@ -7,7 +7,7 @@ nav: true
 nav_order: 4
 ---
 
-## TBD
+## Coming Soon. Please check my individual publication code repos.
 
 <!-- ## GitHub users
 
