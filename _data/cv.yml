@@ -11,9 +11,14 @@
 - title: Education
   type: time_table
   contents:
-    - title: PhD
+    - title: PhD (Computer Science)
       institution: Johns Hopkins University
       year: 2020-now
+    - title: MS (Computer Science)
+      institution: Johns Hopkins University
+      year: 2018-2020
+    - title: Bachelors
+      major: Electronics and Communications
     #   description:
     #     - Description 1.
     #     - Description 2.
