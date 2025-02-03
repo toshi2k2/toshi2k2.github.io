@@ -16,16 +16,19 @@ news: true # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
-<em>“No problem is too small or too trivial if we can really do something about it.”</em>
+<em>“No problem is too small or too trivial if we can really do something about it. - Richard Feynman”</em>
 
 Hi there! Welcome to my bio page!
-I am a 4th year Computer Science PhD student at Johns Hopkins University.
+I am a final year Computer Science PhD Candidate at Johns Hopkins University.
 
-My current work involves intersection of unsupervised learning, 3D generative models, continual learning, domain adaptation, and model robustness. I also dabble in causal inference and optimal transport. My research revolves around using cognitive computational vision concepts for solving signal processing and machine learning problems especially related to computer vision and graphics.
+My current work involves intersection of unsupervised learning, 3D generative models, continual learning, domain adaptation, and model robustness. 
+<!-- I also dabble in causal inference and optimal transport.  -->
+My research revolves around using cognitive computational vision concepts for solving signal processing and machine learning problems especially related to computer vision and graphics.
 
-Currently, I am focusing on projects regarding part-based 3D object representation and completion, text-to-3D generative modelling and lifelong learning for Internet-scale large vision-language models.
+Currently, I am focusing on projects regarding part-based 3D object representation and completion, image-to-3D generative modelling and lifelong learning for Internet-scale large vision-language models.
 
-Looking for collaborators and internships! 
+<!-- Looking for collaborators and internships!  -->
+<em>I'm actively looking for research positions in both academia and industry. If you like my ideas and work, please drop me an email.<em>
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
