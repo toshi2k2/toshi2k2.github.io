@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-[EigenLoRAx](https://eigenlora.webflow.io/) is now available!
+[EigenLoRAx](https://eigenlora.webflow.io/) is now available. Try it out for efficient and sustainable learning of large models.
