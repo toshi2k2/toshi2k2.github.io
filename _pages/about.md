@@ -23,7 +23,7 @@ I am a final year Computer Science PhD Candidate at Johns Hopkins University.
 
 My current work involves intersection of unsupervised learning, 3D generative models, continual learning, domain adaptation, and model robustness. 
 <!-- I also dabble in causal inference and optimal transport.  -->
-My research revolves around using cognitive computational vision concepts for solving signal processing and machine learning problems especially related to computer vision and graphics.
+My research revolves around using cognitive computational vision concepts for solving signal processing and machine learning problems especially related to computer vision and graphics in an efficient manner.
 
 Currently, I am focusing on projects regarding part-based 3D object representation and completion, image-to-3D generative modelling and lifelong learning for Internet-scale large vision-language models.
 
