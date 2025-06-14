@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-[Gaussian Scenes](https://gaussianscenes.github.io/) has been accepted by Transactions on Machine Learning Research (TMLR)!
+[Gaussian Scenes](https://gaussianscenes.github.io/) has been accepted by Transactions on Machine Learning Research (<b>TMLR</b>)!
