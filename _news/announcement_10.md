@@ -5,9 +5,4 @@ inline: true
 related_posts: false
 ---
 
-<span class="blinking">[Gaussian Scenes](https://gaussianscenes.github.io/) has been accepted by Transactions on Machine Learning Research (<strong>TMLR</strong>)!</span>
-
-<style>
-.blinking { animation: blinker 1s linear infinite; }
-@keyframes blinker { 50% { opacity: 0; } }
-</style>
+[Gaussian Scenes](https://gaussianscenes.github.io/) has been accepted by Transactions on Machine Learning Research (<b>TMLR</b>)!

@@ -28,7 +28,23 @@ My research revolves around using cognitive computational vision concepts for so
 Currently, I am focusing on projects regarding part-based 3D object representation and completion, image-to-3D generative modelling and lifelong learning for Internet-scale large vision-language models.
 
 <!-- Looking for collaborators and internships!  -->
-<em>I'm actively looking for research positions in both academia and industry. If you like my ideas and work, please drop me an email.<em>
+<style>
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: no-preference) {
+  .blink {
+    display: inline-block;
+    animation: blink 1s steps(1,end) infinite;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .blink { animation: none; }
+}
+@keyframes blink {
+  50% { visibility: hidden; }
+}
+</style>
+
+<span class="blink"><em>I'm actively looking for research positions in both academia and industry. If you like my ideas and work, please drop me an email.</em></span>
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
