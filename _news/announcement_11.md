@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-One co-first authored paper accepted at International Conference on Computer Vision(<b>ICCV</b>)! See you in Hawaii!
+One co-first authored paper accepted at International Conference on Computer Vision (<b>ICCV</b>)! See you in Hawaii!
