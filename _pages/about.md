@@ -16,16 +16,7 @@ news: true # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
-<em>“No problem is too small or too trivial if we can really do something about it. - Richard Feynman”</em>
 
-Hi there! Welcome to my bio page!
-I am a final year Computer Science PhD Candidate at Johns Hopkins University.
-
-My current work involves intersection of unsupervised learning, 3D generative models, continual learning, domain adaptation, and model robustness. 
-<!-- I also dabble in causal inference and optimal transport.  -->
-My research revolves around using cognitive computational vision concepts for solving signal processing and machine learning problems especially related to computer vision and graphics in an efficient manner.
-
-Currently, I am focusing on projects regarding part-based 3D object representation and completion, image-to-3D generative modelling and lifelong learning for Internet-scale large vision-language models.
 
 <!-- Looking for collaborators and internships!  -->
 <style>
@@ -44,7 +35,23 @@ Currently, I am focusing on projects regarding part-based 3D object representati
 }
 </style>
 
-<span class="blink"><em>I'm actively looking for research positions in both academia and industry. If you like my ideas and work, please drop me an email.</em></span>
+<span class="blink"><em>I'm actively looking for research positions in both academia and industry. If you like my ideas and work, please drop me an email at pkaushi1@jh.edu.</em></span>
+
+<em>“No problem is too small or too trivial if we can really do something about it. - Richard Feynman”</em>
+
+<!-- Hi there! Welcome to my bio page! -->
+I am a final year Computer Science PhD Candidate at Johns Hopkins University under Dr.Alan Yuille, Bloomberg Distinguished Professor of Computational Cognitive Science.
+
+I am a AI and computational cognitive researcher - which means I bridge the fields of cognitive sciences, machine learning and computer vision.
+
+My current work deals with 3D analysis by synthesis, 3D part models, interpretability, model merging, efficient and constrained learning of generative models (2D/3D/4D and LLM/VLMs).
+
+My past work involved intersection of unsupervised learning, 3D generative models, continual learning, domain adaptation, and model robustness. 
+<!-- I also dabble in causal inference and optimal transport.  -->
+<!-- My research revolves around using cognitive computational vision concepts for solving signal processing and machine learning problems especially related to computer vision and graphics in an efficient manner. -->
+
+Currently, I am focusing on projects regarding part-based 3D object representation and completion, image-to-3D generative modelling and lifelong learning for Internet-scale large vision-language models.
+
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
