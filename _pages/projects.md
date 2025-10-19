@@ -9,4 +9,4 @@ display_categories: [work, fun]
 horizontal: false
 ---
 
-## Coming Soon. 
+## See Publications. 
