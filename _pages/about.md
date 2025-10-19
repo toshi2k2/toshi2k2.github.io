@@ -35,7 +35,7 @@ social: true # includes social icons at the bottom of the page
 }
 </style>
 
-<span class="blink"><em>I'm actively looking for research positions in both academia and industry. If you like my ideas and work, please drop me an email at pkaushi1@jh.edu.</em></span>
+<p class="blink" style="display:block; white-space:normal;"><em>I'm actively looking for research positions in both academia and industry. If you like my ideas and work, please drop me an email at <a href="mailto:pkaushi1@jh.edu">pkaushi1@jh.edu</a>.</em></p>
 
 <em>“No problem is too small or too trivial if we can really do something about it. - Richard Feynman”</em>
 
