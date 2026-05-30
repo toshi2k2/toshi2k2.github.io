@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="/assets/css/research.css">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>%F0%9F%A7%A0</text></svg>">
   </head>
-  <body>
+  <body class="publications-page">
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header" id="top">
       <div class="container nav-wrap">
@@ -38,7 +38,7 @@
           </ul>
         </nav>
         <div class="utility-links" aria-label="Secondary">
-          <a href="/assets/pdf/PK_CVApr24.pdf">CV</a>
+          <a href="/cv/">CV</a>
           <a href="https://scholar.google.com/citations?user=GXJRSLQAAAAJ" rel="external noopener" target="_blank">Scholar</a>
           <a href="https://github.com/toshi2k2" rel="external noopener" target="_blank">GitHub</a>
           <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle theme" aria-pressed="false">
@@ -52,8 +52,21 @@
     <main id="main" class="container">
       <header class="page-header">
         <h1>Publications</h1>
-        <p>Use thematic view for a quick scan and chronological view for a full timeline. Full list on <a href="https://scholar.google.com/citations?user=GXJRSLQAAAAJ" rel="external noopener" target="_blank">Google Scholar</a>.</p>
-        <p class="pub-header-note">For hiring and collaboration discussions, the first two thematic sections are the best starting point.</p>
+        <p>Search by concept, filter by research direction, then expand any paper for a concise abstract and links. Full list on <a href="https://scholar.google.com/citations?user=GXJRSLQAAAAJ" rel="external noopener" target="_blank">Google Scholar</a>.</p>
+        <p class="pub-header-note">For hiring and collaboration discussions, start with <strong>Universal Weight Subspace</strong> and <strong>Name That Part</strong>.</p>
+        <form class="pub-discovery" role="search" aria-label="Search and filter publications" onsubmit="return false;">
+          <label for="pub-search">Find papers by idea, venue, or method</label>
+          <input id="pub-search" type="search" data-pub-search placeholder="Try: 3D parts, subspace, LoRA, domain adaptation, OOD, diffusion" autocomplete="off">
+          <div class="pub-filter-bar" role="group" aria-label="Publication filters">
+            <button type="button" data-pub-filter="all" aria-pressed="true">All</button>
+            <button type="button" data-pub-filter="flagship" aria-pressed="false">Flagship</button>
+            <button type="button" data-pub-filter="3d" aria-pressed="false">3D Vision</button>
+            <button type="button" data-pub-filter="efficient" aria-pressed="false">Efficient Learning</button>
+            <button type="button" data-pub-filter="robustness" aria-pressed="false">Robustness</button>
+            <button type="button" data-pub-filter="generative" aria-pressed="false">Generative</button>
+          </div>
+          <p class="pub-result-count" data-pub-count aria-live="polite">Showing all papers.</p>
+        </form>
         <nav class="pub-jump-links" aria-label="Jump to publication themes">
           <a href="#theme-perception">Perception</a>
           <a href="#theme-efficiency">Efficient Learning</a>
@@ -78,12 +91,12 @@
           <p class="pub-meta"><span class="pub-venue">Venue</span></p>
           <p class="pub-summary">Two-line summary of the contribution and scope.</p>
           <details class="pub-details">
-            <summary>Links &amp; BibTeX</summary>
+            <summary>Abstract, links &amp; BibTeX</summary>
             <div class="details-body">
               <div>Preprint link coming soon.</div>
               <div>Project page coming soon.</div>
               <div>
-                <a class="btn btn-secondary btn-small pub-bibtex-button" href="/assets/bibliography/your_paper.bib" data-bibtex-key="your-key">BibTeX</a>
+                <a class="btn btn-secondary btn-small" href="/assets/bibliography/your_paper.bib" data-template-bibtex-key="your-key">BibTeX</a>
               </div>
             </div>
           </details>
@@ -98,7 +111,7 @@
             <h3>Perceptual Taxonomy: Evaluating and Guiding Hierarchical Scene Reasoning in Vision-Language Models</h3>
             <p class="pub-summary">A taxonomy for evaluating hierarchical scene reasoning in vision-language models.</p>
             <details class="pub-details">
-              <summary>Links &amp; BibTeX</summary>
+              <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
                 <div><a href="https://arxiv.org/abs/2511.19526" rel="external noopener" target="_blank">arXiv</a></div>
                 <div>
@@ -110,14 +123,12 @@
 
           <article class="pub-item pub-item--media">
             <figure class="pub-media">
-              <a class="pub-media-link" href="/assets/img/publications/canvas.png">
-                <img src="/assets/img/publications/canvas.png" alt="Preview image for Name That Part" loading="lazy">
-              </a>
+              <video src="/assets/video/name-that-part-teaser.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Name That Part 3D part segmentation and naming teaser"></video>
             </figure>
             <h3>Name That Part: 3D Part Segmentation and Naming</h3>
             <p class="pub-summary">Joint 3D part segmentation and semantic naming.</p>
             <details class="pub-details">
-              <summary>Links &amp; BibTeX</summary>
+              <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
                 <div><a href="https://arxiv.org/abs/2512.18003" rel="external noopener" target="_blank">arXiv</a></div>
                 <div><a href="https://name-that-part.github.io/" rel="external noopener" target="_blank">Website</a></div>
@@ -133,7 +144,7 @@
             <p class="pub-meta"><span class="pub-venue">WACV 2024</span></p>
             <p class="pub-summary">Part segmentation learned from synthetic animal data.</p>
             <details class="pub-details">
-              <summary>Links &amp; BibTeX</summary>
+              <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
                 <div>Preprint link coming soon.</div>
                 <div>
@@ -148,7 +159,7 @@
             <p class="pub-meta"><span class="pub-venue">ICCV 2023</span></p>
             <p class="pub-summary">A comprehensive dataset for 3D animal pose and shape.</p>
             <details class="pub-details">
-              <summary>Links &amp; BibTeX</summary>
+              <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
                 <div>Preprint link coming soon.</div>
                 <div>
@@ -165,13 +176,13 @@
           <article class="pub-item pub-item--media">
             <figure class="pub-media">
               <a class="pub-media-link" href="/assets/img/publications/unisub_mainfig.png">
-                <img src="/assets/img/publications/unisub_mainfig.png" alt="Preview image for The Universal Weight Subspace Hypothesis" loading="lazy">
+                <img src="/assets/img/spotlight/unisub_thumb.jpg" alt="Preview image for The Universal Weight Subspace Hypothesis" loading="lazy">
               </a>
             </figure>
             <h3>The Universal Weight Subspace Hypothesis</h3>
             <p class="pub-summary">Shared weight-subspace structure for efficient adaptation and continual learning.</p>
             <details class="pub-details">
-              <summary>Links &amp; BibTeX</summary>
+              <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
                 <div><a href="https://arxiv.org/abs/2512.05117" rel="external noopener" target="_blank">arXiv</a></div>
                 <div><a href="https://toshi2k2.github.io/unisub/" rel="external noopener" target="_blank">Website</a></div>
@@ -185,7 +196,7 @@
           <article class="pub-item pub-item--media">
             <figure class="pub-media">
               <a class="pub-media-link" href="/assets/img/publications/elorax.jpg">
-                <img src="/assets/img/publications/elorax.jpg" alt="Preview image for EigenLoRAx" loading="lazy">
+                <img src="/assets/img/spotlight/eigenlorax_thumb.jpg" alt="Preview image for EigenLoRAx" loading="lazy">
               </a>
             </figure>
             <h3>EigenLoRAx: Recycling Adapters to Find Principal Subspaces for Resource-Efficient Adaptation and Inference</h3>
@@ -195,7 +206,7 @@
             </p>
             <p class="pub-summary">Resource-efficient adaptation and inference via adapter recycling.</p>
             <details class="pub-details">
-              <summary>Links &amp; BibTeX</summary>
+              <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
                 <div><a href="https://www.arxiv.org/abs/2502.04700" rel="external noopener" target="_blank">arXiv</a></div>
                 <div><a href="https://eigenlora.webflow.io/" rel="external noopener" target="_blank">Website</a></div>
@@ -217,7 +228,7 @@
             <p class="pub-meta"><span class="pub-venue">arXiv 2026</span></p>
             <p class="pub-summary">A shared-subspace approach toward almost strict continual learning for large models.</p>
             <details class="pub-details">
-              <summary>Links &amp; BibTeX</summary>
+              <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
                 <div><a href="https://arxiv.org/abs/2602.06043" rel="external noopener" target="_blank">arXiv</a></div>
                 <div><a href="https://toshi2k2.github.io/share/" rel="external noopener" target="_blank">Website</a></div>
@@ -233,7 +244,7 @@
             <p class="pub-meta"><span class="pub-venue">NeurIPS Meta-Learning Workshop 2021</span></p>
             <p class="pub-summary">Continual learning with optimal relevance mapping.</p>
             <details class="pub-details">
-              <summary>Links &amp; BibTeX</summary>
+              <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
                 <div><a href="https://arxiv.org/abs/2102.11343" rel="external noopener" target="_blank">arXiv</a></div>
                 <div><a href="https://gitlab.com/prakhark2/relevance-mapping-networks" rel="external noopener" target="_blank">Code</a></div>
@@ -249,7 +260,7 @@
             <p class="pub-meta"><span class="pub-venue">ECCV 2024</span></p>
             <p class="pub-summary">Incremental neural mesh models for class-incremental learning.</p>
             <details class="pub-details">
-              <summary>Links &amp; BibTeX</summary>
+              <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
                 <div><a href="https://github.com/fischer-tom/inemo" rel="external noopener" target="_blank">Code</a></div>
                 <div>
@@ -264,7 +275,7 @@
             <p class="pub-meta"><span class="pub-venue">WACV 2020</span></p>
             <p class="pub-summary">Adaptive neural connectivity for sparsity-aware learning.</p>
             <details class="pub-details">
-              <summary>Links &amp; BibTeX</summary>
+              <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
                 <div><a href="https://openaccess.thecvf.com/content_WACV_2020/html/Gain_Adaptive_Neural_Connections_for_Sparsity_Learning_WACV_2020_paper.html" rel="external noopener" target="_blank">Paper</a></div>
                 <div>
@@ -280,6 +291,27 @@
 
           <article class="pub-item pub-item--media">
             <figure class="pub-media">
+              <video src="/assets/video/can-these-views-gaussian-noise.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Hallucinated 3D geometry from Gaussian noise"></video>
+            </figure>
+            <h3>Can These Views Be One Scene? Evaluating Multiview 3D Consistency when 3D Foundation Models Hallucinate</h3>
+            <p class="pub-meta"><span class="pub-venue">arXiv 2026</span></p>
+            <p class="pub-summary">Failure-aware multiview 3D consistency metrics for hallucination-prone foundation reconstruction models.</p>
+            <details class="pub-details">
+              <summary>Abstract, links &amp; BibTeX</summary>
+              <div class="details-body">
+                <div><a href="https://arxiv.org/abs/2605.18754" rel="external noopener" target="_blank">arXiv</a></div>
+                <div><a href="https://mvp18.github.io/3d-consistency-metrics/" rel="external noopener" target="_blank">Website</a></div>
+                <div><a href="https://github.com/mvp18/3DConsistency-metrics" rel="external noopener" target="_blank">Code</a></div>
+                <div><a href="https://x.com/zhenjun_zhao/status/2056719622993244631" rel="external noopener" target="_blank">X post</a></div>
+                <div>
+                  <a class="btn btn-secondary btn-small pub-bibtex-button" href="/assets/bibliography/your_paper.bib" data-bibtex-key="paul2026canviews">BibTeX</a>
+                </div>
+              </div>
+            </details>
+          </article>
+
+          <article class="pub-item pub-item--media">
+            <figure class="pub-media">
               <a class="pub-media-link" href="/assets/img/publications/3dcomp.png">
                 <img src="/assets/img/publications/3dcomp.png" alt="Preview image for Scaling 3D Compositional Models" loading="lazy">
               </a>
@@ -288,7 +320,7 @@
             <p class="pub-meta"><span class="pub-venue">ICCV 2025</span></p>
             <p class="pub-summary">Scaling compositional models for robust 3D classification and pose.</p>
             <details class="pub-details">
-              <summary>Links &amp; BibTeX</summary>
+              <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
                 <div><a href="https://openaccess.thecvf.com/content/ICCV2025/html/Yuan_Scaling_3D_Compositional_Models_for_Robust_Classification_and_Pose_Estimation_ICCV_2025_paper.html" rel="external noopener" target="_blank">Paper</a></div>
                 <div>
@@ -308,7 +340,7 @@
             <p class="pub-meta"><span class="pub-venue">ICLR 2024</span></p>
             <p class="pub-summary">Source-free domain adaptation for category-level pose estimation.</p>
             <details class="pub-details">
-              <summary>Links &amp; BibTeX</summary>
+              <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
                 <div><a href="https://arxiv.org/abs/2401.10848" rel="external noopener" target="_blank">arXiv</a></div>
                 <div><a href="https://toshi2k2.github.io/adaptbycomp/" rel="external noopener" target="_blank">Website</a></div>
@@ -329,7 +361,7 @@
             <p class="pub-meta"><span class="pub-venue">CVPR 2024</span></p>
             <p class="pub-summary">Bayesian OOD robustness in image classification.</p>
             <details class="pub-details">
-              <summary>Links &amp; BibTeX</summary>
+              <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
                 <div>Preprint link coming soon.</div>
                 <div><a href="https://toshi2k2.github.io/adaptbycomp/" rel="external noopener" target="_blank">Website</a></div>
@@ -349,7 +381,7 @@
             <h3>TriDiff-4D: Fast 4D Generation through Diffusion-based Triplane Re-posing</h3>
             <p class="pub-summary">Fast 4D generation through diffusion-based triplane re-posing.</p>
             <details class="pub-details">
-              <summary>Links &amp; BibTeX</summary>
+              <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
                 <div><a href="https://arxiv.org/abs/2511.16662" rel="external noopener" target="_blank">arXiv</a></div>
                 <div>
@@ -362,14 +394,14 @@
           <article class="pub-item pub-item--media">
             <figure class="pub-media">
               <a class="pub-media-link" href="/assets/img/publications/gs2.png">
-                <img src="/assets/img/publications/gs2.png" alt="Preview image for Gaussian Scenes" loading="lazy">
+                <img src="/assets/img/spotlight/gaussian_scenes_thumb.jpg" alt="Preview image for Gaussian Scenes" loading="lazy">
               </a>
             </figure>
             <h3>Gaussian Scenes: Pose-Free Sparse-View Scene Reconstruction using Depth-Enhanced Diffusion Priors</h3>
             <p class="pub-meta"><span class="pub-venue">TMLR 2025</span></p>
             <p class="pub-summary">Pose-free sparse-view scene reconstruction using diffusion priors.</p>
             <details class="pub-details">
-              <summary>Links &amp; BibTeX</summary>
+              <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
                 <div><a href="https://arxiv.org/html/2411.15966v1" rel="external noopener" target="_blank">arXiv</a></div>
                 <div><a href="https://gaussianscenes.github.io/" rel="external noopener" target="_blank">Website</a></div>
@@ -388,7 +420,7 @@
             </p>
             <p class="pub-summary">Improved alignment in text-to-image generative models.</p>
             <details class="pub-details">
-              <summary>Links &amp; BibTeX</summary>
+              <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
                 <div><a href="https://arxiv.org/abs/2503.17794" rel="external noopener" target="_blank">arXiv</a></div>
                 <div>
@@ -407,7 +439,7 @@
             <p class="pub-meta"><span class="pub-venue">WINSYS 2017</span></p>
             <p class="pub-summary">Offline outdoor navigation with full privacy.</p>
             <details class="pub-details">
-              <summary>Links &amp; BibTeX</summary>
+              <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
                 <div>Preprint link coming soon.</div>
                 <div>
@@ -422,7 +454,7 @@
             <p class="pub-meta"><span class="pub-venue">ICRITO 2017</span></p>
             <p class="pub-summary">Timing attack analysis on AES on modern processors.</p>
             <details class="pub-details">
-              <summary>Links &amp; BibTeX</summary>
+              <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
                 <div>Preprint link coming soon.</div>
                 <div>
@@ -437,7 +469,7 @@
             <p class="pub-meta"><span class="pub-venue">GlobalSIP 2019</span></p>
             <p class="pub-summary">Real-time neural model-based human detection and behavior classification.</p>
             <details class="pub-details">
-              <summary>Links &amp; BibTeX</summary>
+              <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
                 <div>Preprint link coming soon.</div>
                 <div>
@@ -455,14 +487,33 @@
 
           <article class="pub-item pub-item--media">
             <figure class="pub-media">
-              <a class="pub-media-link" href="/assets/img/publications/canvas.png">
-                <img src="/assets/img/publications/canvas.png" alt="Preview image for Name That Part" loading="lazy">
-              </a>
+              <video src="/assets/video/can-these-views-gaussian-noise.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Hallucinated 3D geometry from Gaussian noise"></video>
+            </figure>
+            <h3>Can These Views Be One Scene? Evaluating Multiview 3D Consistency when 3D Foundation Models Hallucinate</h3>
+            <p class="pub-meta"><span class="pub-venue">arXiv 2026</span></p>
+            <p class="pub-summary">Failure-aware multiview 3D consistency metrics for hallucination-prone foundation reconstruction models.</p>
+            <details class="pub-details">
+              <summary>Abstract, links &amp; BibTeX</summary>
+              <div class="details-body">
+                <div><a href="https://arxiv.org/abs/2605.18754" rel="external noopener" target="_blank">arXiv</a></div>
+                <div><a href="https://mvp18.github.io/3d-consistency-metrics/" rel="external noopener" target="_blank">Website</a></div>
+                <div><a href="https://github.com/mvp18/3DConsistency-metrics" rel="external noopener" target="_blank">Code</a></div>
+                <div><a href="https://x.com/zhenjun_zhao/status/2056719622993244631" rel="external noopener" target="_blank">X post</a></div>
+                <div>
+                  <a class="btn btn-secondary btn-small pub-bibtex-button" href="/assets/bibliography/your_paper.bib" data-bibtex-key="paul2026canviews">BibTeX</a>
+                </div>
+              </div>
+            </details>
+          </article>
+
+          <article class="pub-item pub-item--media">
+            <figure class="pub-media">
+              <video src="/assets/video/name-that-part-teaser.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Name That Part 3D part segmentation and naming teaser"></video>
             </figure>
             <h3>Name That Part: 3D Part Segmentation and Naming</h3>
             <p class="pub-summary">Joint 3D part segmentation and semantic naming.</p>
             <details class="pub-details">
-              <summary>Links &amp; BibTeX</summary>
+              <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
                 <div><a href="https://arxiv.org/abs/2512.18003" rel="external noopener" target="_blank">arXiv</a></div>
                 <div><a href="https://name-that-part.github.io/" rel="external noopener" target="_blank">Website</a></div>
@@ -483,7 +534,7 @@
             <p class="pub-meta"><span class="pub-venue">arXiv 2026</span></p>
             <p class="pub-summary">A shared-subspace approach toward almost strict continual learning for large models.</p>
             <details class="pub-details">
-              <summary>Links &amp; BibTeX</summary>
+              <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
                 <div><a href="https://arxiv.org/abs/2602.06043" rel="external noopener" target="_blank">arXiv</a></div>
                 <div><a href="https://toshi2k2.github.io/share/" rel="external noopener" target="_blank">Website</a></div>
@@ -502,7 +553,7 @@
             <h3>Perceptual Taxonomy: Evaluating and Guiding Hierarchical Scene Reasoning in Vision-Language Models</h3>
             <p class="pub-summary">A taxonomy for evaluating hierarchical scene reasoning in vision-language models.</p>
             <details class="pub-details">
-              <summary>Links &amp; BibTeX</summary>
+              <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
                 <div><a href="https://arxiv.org/abs/2511.19526" rel="external noopener" target="_blank">arXiv</a></div>
                 <div>
@@ -515,13 +566,13 @@
           <article class="pub-item pub-item--media">
             <figure class="pub-media">
               <a class="pub-media-link" href="/assets/img/publications/unisub_mainfig.png">
-                <img src="/assets/img/publications/unisub_mainfig.png" alt="Preview image for The Universal Weight Subspace Hypothesis" loading="lazy">
+                <img src="/assets/img/spotlight/unisub_thumb.jpg" alt="Preview image for The Universal Weight Subspace Hypothesis" loading="lazy">
               </a>
             </figure>
             <h3>The Universal Weight Subspace Hypothesis</h3>
             <p class="pub-summary">Shared weight-subspace structure for efficient adaptation and continual learning.</p>
             <details class="pub-details">
-              <summary>Links &amp; BibTeX</summary>
+              <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
                 <div><a href="https://arxiv.org/abs/2512.05117" rel="external noopener" target="_blank">arXiv</a></div>
                 <div><a href="https://toshi2k2.github.io/unisub/" rel="external noopener" target="_blank">Website</a></div>
@@ -542,7 +593,7 @@
             <p class="pub-meta"><span class="pub-venue">ICCV 2025</span></p>
             <p class="pub-summary">Scaling compositional models for robust 3D classification and pose.</p>
             <details class="pub-details">
-              <summary>Links &amp; BibTeX</summary>
+              <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
                 <div><a href="https://openaccess.thecvf.com/content/ICCV2025/html/Yuan_Scaling_3D_Compositional_Models_for_Robust_Classification_and_Pose_Estimation_ICCV_2025_paper.html" rel="external noopener" target="_blank">Paper</a></div>
                 <div>
@@ -556,7 +607,7 @@
             <h3>TriDiff-4D: Fast 4D Generation through Diffusion-based Triplane Re-posing</h3>
             <p class="pub-summary">Fast 4D generation through diffusion-based triplane re-posing.</p>
             <details class="pub-details">
-              <summary>Links &amp; BibTeX</summary>
+              <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
                 <div><a href="https://arxiv.org/abs/2511.16662" rel="external noopener" target="_blank">arXiv</a></div>
                 <div>
@@ -569,14 +620,14 @@
           <article class="pub-item pub-item--media">
             <figure class="pub-media">
               <a class="pub-media-link" href="/assets/img/publications/gs2.png">
-                <img src="/assets/img/publications/gs2.png" alt="Preview image for Gaussian Scenes" loading="lazy">
+                <img src="/assets/img/spotlight/gaussian_scenes_thumb.jpg" alt="Preview image for Gaussian Scenes" loading="lazy">
               </a>
             </figure>
             <h3>Gaussian Scenes: Pose-Free Sparse-View Scene Reconstruction using Depth-Enhanced Diffusion Priors</h3>
             <p class="pub-meta"><span class="pub-venue">TMLR 2025</span></p>
             <p class="pub-summary">Pose-free sparse-view scene reconstruction using diffusion priors.</p>
             <details class="pub-details">
-              <summary>Links &amp; BibTeX</summary>
+              <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
                 <div><a href="https://arxiv.org/html/2411.15966v1" rel="external noopener" target="_blank">arXiv</a></div>
                 <div><a href="https://gaussianscenes.github.io/" rel="external noopener" target="_blank">Website</a></div>
@@ -595,7 +646,7 @@
             </p>
             <p class="pub-summary">Improved alignment in text-to-image generative models.</p>
             <details class="pub-details">
-              <summary>Links &amp; BibTeX</summary>
+              <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
                 <div><a href="https://arxiv.org/abs/2503.17794" rel="external noopener" target="_blank">arXiv</a></div>
                 <div>
@@ -608,7 +659,7 @@
           <article class="pub-item pub-item--media">
             <figure class="pub-media">
               <a class="pub-media-link" href="/assets/img/publications/elorax.jpg">
-                <img src="/assets/img/publications/elorax.jpg" alt="Preview image for EigenLoRAx" loading="lazy">
+                <img src="/assets/img/spotlight/eigenlorax_thumb.jpg" alt="Preview image for EigenLoRAx" loading="lazy">
               </a>
             </figure>
             <h3>EigenLoRAx: Recycling Adapters to Find Principal Subspaces for Resource-Efficient Adaptation and Inference</h3>
@@ -618,7 +669,7 @@
             </p>
             <p class="pub-summary">Resource-efficient adaptation and inference via adapter recycling.</p>
             <details class="pub-details">
-              <summary>Links &amp; BibTeX</summary>
+              <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
                 <div><a href="https://www.arxiv.org/abs/2502.04700" rel="external noopener" target="_blank">arXiv</a></div>
                 <div><a href="https://eigenlora.webflow.io/" rel="external noopener" target="_blank">Website</a></div>
@@ -640,7 +691,7 @@
             <p class="pub-meta"><span class="pub-venue">ECCV 2024</span></p>
             <p class="pub-summary">Incremental neural mesh models for class-incremental learning.</p>
             <details class="pub-details">
-              <summary>Links &amp; BibTeX</summary>
+              <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
                 <div><a href="https://github.com/fischer-tom/inemo" rel="external noopener" target="_blank">Code</a></div>
                 <div>
@@ -655,7 +706,7 @@
             <p class="pub-meta"><span class="pub-venue">WACV 2024</span></p>
             <p class="pub-summary">Part segmentation learned from synthetic animal data.</p>
             <details class="pub-details">
-              <summary>Links &amp; BibTeX</summary>
+              <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
                 <div>Preprint link coming soon.</div>
                 <div>
@@ -675,7 +726,7 @@
             <p class="pub-meta"><span class="pub-venue">ICLR 2024</span></p>
             <p class="pub-summary">Source-free domain adaptation for category-level pose estimation.</p>
             <details class="pub-details">
-              <summary>Links &amp; BibTeX</summary>
+              <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
                 <div><a href="https://arxiv.org/abs/2401.10848" rel="external noopener" target="_blank">arXiv</a></div>
                 <div><a href="https://toshi2k2.github.io/adaptbycomp/" rel="external noopener" target="_blank">Website</a></div>
@@ -696,7 +747,7 @@
             <p class="pub-meta"><span class="pub-venue">CVPR 2024</span></p>
             <p class="pub-summary">Bayesian OOD robustness in image classification.</p>
             <details class="pub-details">
-              <summary>Links &amp; BibTeX</summary>
+              <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
                 <div>Preprint link coming soon.</div>
                 <div><a href="https://toshi2k2.github.io/adaptbycomp/" rel="external noopener" target="_blank">Website</a></div>
@@ -717,7 +768,7 @@
             <p class="pub-meta"><span class="pub-venue">ICCV 2023</span></p>
             <p class="pub-summary">A comprehensive dataset for 3D animal pose and shape.</p>
             <details class="pub-details">
-              <summary>Links &amp; BibTeX</summary>
+              <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
                 <div>Preprint link coming soon.</div>
                 <div>
@@ -736,7 +787,7 @@
             <p class="pub-meta"><span class="pub-venue">NeurIPS Meta-Learning Workshop 2021</span></p>
             <p class="pub-summary">Continual learning with optimal relevance mapping.</p>
             <details class="pub-details">
-              <summary>Links &amp; BibTeX</summary>
+              <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
                 <div><a href="https://arxiv.org/abs/2102.11343" rel="external noopener" target="_blank">arXiv</a></div>
                 <div><a href="https://gitlab.com/prakhark2/relevance-mapping-networks" rel="external noopener" target="_blank">Code</a></div>
@@ -756,7 +807,7 @@
             <p class="pub-meta"><span class="pub-venue">WACV 2020</span></p>
             <p class="pub-summary">Adaptive neural connectivity for sparsity-aware learning.</p>
             <details class="pub-details">
-              <summary>Links &amp; BibTeX</summary>
+              <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
                 <div><a href="https://openaccess.thecvf.com/content_WACV_2020/html/Gain_Adaptive_Neural_Connections_for_Sparsity_Learning_WACV_2020_paper.html" rel="external noopener" target="_blank">Paper</a></div>
                 <div>
@@ -775,7 +826,7 @@
             <p class="pub-meta"><span class="pub-venue">GlobalSIP 2019</span></p>
             <p class="pub-summary">Real-time neural model-based human detection and behavior classification.</p>
             <details class="pub-details">
-              <summary>Links &amp; BibTeX</summary>
+              <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
                 <div>Preprint link coming soon.</div>
                 <div>
@@ -794,7 +845,7 @@
             <p class="pub-meta"><span class="pub-venue">WINSYS 2017</span></p>
             <p class="pub-summary">Offline outdoor navigation with full privacy.</p>
             <details class="pub-details">
-              <summary>Links &amp; BibTeX</summary>
+              <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
                 <div>Preprint link coming soon.</div>
                 <div>
@@ -809,7 +860,7 @@
             <p class="pub-meta"><span class="pub-venue">ICRITO 2017</span></p>
             <p class="pub-summary">Timing attack analysis on AES on modern processors.</p>
             <details class="pub-details">
-              <summary>Links &amp; BibTeX</summary>
+              <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
                 <div>Preprint link coming soon.</div>
                 <div>
@@ -820,11 +871,12 @@
           </article>
         </section>
       </div>
+      <p class="pub-no-results is-hidden" data-pub-empty>No matching publications. Try a broader term or switch filters.</p>
     </main>
 
     <dialog class="img-dialog" aria-label="Publication image preview">
       <button class="img-dialog-close" type="button">Close</button>
-      <img src="" alt="">
+      <img src="" alt="Publication image preview">
     </dialog>
 
     <dialog class="bibtex-dialog" aria-label="BibTeX entry">
@@ -841,7 +893,7 @@
     </dialog>
 
     <footer class="footer">
-      <div class="container">© 2025 Prakhar Kaushik. Built for GitHub Pages.</div>
+      <div class="container">© 2026 Prakhar Kaushik. Built for GitHub Pages.</div>
     </footer>
     <script>
       (function () {
@@ -1046,6 +1098,7 @@
         });
       })();
     </script>
+      <script src="/assets/js/publication-filters.js" defer></script>
       <script src="/assets/js/theme-toggle.js" defer></script>
   </body>
 </html>

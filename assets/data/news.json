@@ -1,0 +1,98 @@
+[
+  {
+    "date": "2026-06-03",
+    "displayDate": "Jun 3-7, 2026",
+    "tag": "CVPR",
+    "title": "Presenting Name That Part at CVPR 2026",
+    "summary": "Presenting Name That Part at CVPR 2026 in Denver.",
+    "url": "https://name-that-part.github.io/"
+  },
+  {
+    "date": "2026-05-29",
+    "displayDate": "May 29, 2026",
+    "tag": "Market",
+    "title": "I am on the job market for research positions in industry and academia.",
+    "summary": "Open to research roles spanning 3D vision, efficient learning, interpretability, and robust AI.",
+    "url": "/cv/"
+  },
+  {
+    "date": "2026-05-18",
+    "displayDate": "May 18, 2026",
+    "tag": "3D Evaluation",
+    "title": "Can These Views Be One Scene? released",
+    "summary": "New paper, project page, code, and X discussion on multiview 3D consistency when foundation models hallucinate.",
+    "url": "https://mvp18.github.io/3d-consistency-metrics/"
+  },
+  {
+    "date": "2026-04-15",
+    "displayDate": "Apr 2026",
+    "tag": "Talk",
+    "title": "Invited talk at Caltech Anima Lab",
+    "summary": "Talk on structured 3D perception, efficient adaptation, and human-like learning.",
+    "url": "/talks/"
+  },
+  {
+    "date": "2026-01-15",
+    "displayDate": "Jan 2026",
+    "tag": "Talk",
+    "title": "Invited talk at Levin Lab, Tufts University",
+    "summary": "Talk connecting cognitive AI, morphogenesis, and structured world models.",
+    "url": "/talks/"
+  },
+  {
+    "date": "2026-02-20",
+    "displayDate": "Feb 20, 2026",
+    "tag": "Acceptance",
+    "title": "Name That Part accepted to CVPR 2026 Findings",
+    "summary": "Name That Part was accepted to CVPR 2026 Findings.",
+    "url": "https://name-that-part.github.io/"
+  },
+  {
+    "date": "2026-02-05",
+    "displayDate": "Feb 5, 2026",
+    "tag": "Efficient AI",
+    "title": "Share paper released",
+    "summary": "Shared LoRA Subspaces for Almost Strict Continual Learning released on arXiv.",
+    "url": "https://toshi2k2.github.io/share/"
+  },
+  {
+    "date": "2025-12-19",
+    "displayDate": "Dec 19, 2025",
+    "tag": "3D Vision",
+    "title": "Name That Part released",
+    "summary": "A one-shot model for named 3D part segmentation, with project materials and paper available.",
+    "url": "https://name-that-part.github.io/"
+  },
+  {
+    "date": "2025-12-04",
+    "displayDate": "Dec 4, 2025",
+    "tag": "Theory",
+    "title": "Universal Weight Subspace Hypothesis released",
+    "summary": "Large-scale evidence that diverse neural networks reuse shared low-dimensional spectral subspaces.",
+    "url": "https://toshi2k2.github.io/unisub/"
+  },
+  {
+    "date": "2025-08-13",
+    "displayDate": "Aug 13, 2025",
+    "tag": "Feature",
+    "title": "Johns Hopkins Engineering profile",
+    "summary": "Featured in Johns Hopkins Engineering for work on interpretable, efficient, and robust AI.",
+    "url": "https://engineering.jhu.edu/news/in-the-world-of-ai-who-speaks-for-the-trees/"
+  },
+  {
+    "date": "2025-06-13",
+    "displayDate": "Jun 13, 2025",
+    "tag": "Publication",
+    "title": "Gaussian Scenes accepted to TMLR",
+    "summary": "Pose-free sparse-view scene reconstruction using depth-enhanced diffusion priors.",
+    "url": "https://gaussianscenes.github.io/"
+  },
+  {
+    "date": "2025-02-11",
+    "displayDate": "Feb 11, 2025",
+    "tag": "Efficient AI",
+    "title": "EigenLoRAx project released",
+    "summary": "Adapter recycling for resource-efficient adaptation and inference across large models.",
+    "url": "https://eigenlora.webflow.io/"
+  }
+]
