@@ -48,12 +48,19 @@ Steps:
      "tag": "Market",
      "title": "Faculty-market profile updated",
      "summary": "Short one-sentence update.",
-     "url": "/cv/"
+     "url": "/cv/",
+     "links": [
+       {
+         "label": "Related project",
+         "url": "https://example.com/"
+       }
+     ]
    }
    ```
-2) Use absolute `https://...` URLs for external links. The renderer automatically adds safe external-link attributes.
-3) Keep `date` in `YYYY-MM-DD` form so the feed sorts correctly.
-4) If you want the full legacy list updated, also edit `news/index.html` (old theme).
+2) `links` is optional; use it for extra related project/paper links on the same news item.
+3) Use absolute `https://...` URLs for external links. The renderer automatically adds safe external-link attributes.
+4) Keep `date` in `YYYY-MM-DD` form so the feed sorts correctly.
+5) If you want the full legacy list updated, also edit `news/index.html` (old theme).
 
 The renderer lives in `assets/js/site-news.js`. If JavaScript is unavailable or
 the page is opened directly from `file://`, the fallback news items in

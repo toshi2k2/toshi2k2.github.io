@@ -44,6 +44,29 @@
       body.appendChild(document.createTextNode(" — " + item.summary));
     }
 
+    if (Array.isArray(item.links) && item.links.length) {
+      var links = document.createElement("span");
+      links.className = "news-links";
+      var linkCount = 0;
+      item.links.forEach(function (extraLink) {
+        if (!extraLink || !extraLink.url) {
+          return;
+        }
+        var anchor = document.createElement("a");
+        anchor.href = extraLink.url;
+        anchor.textContent = extraLink.label || extraLink.url;
+        if (isExternal(extraLink.url)) {
+          anchor.target = "_blank";
+          anchor.rel = "external noopener";
+        }
+        links.appendChild(anchor);
+        linkCount += 1;
+      });
+      if (linkCount) {
+        body.appendChild(links);
+      }
+    }
+
     article.appendChild(date);
     article.appendChild(body);
     return article;

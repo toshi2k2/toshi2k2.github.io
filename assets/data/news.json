@@ -1,5 +1,31 @@
 [
   {
+    "date": "2026-06-24",
+    "displayDate": "Jun 2026",
+    "tag": "Talk",
+    "title": "Research talk at Carnegie Mellon University",
+    "summary": "Gave a research talk at CMU.",
+    "url": "/talks/"
+  },
+  {
+    "date": "2026-06-20",
+    "displayDate": "Jun 2026",
+    "tag": "Acceptance",
+    "title": "Two papers accepted to ECCV 2026",
+    "summary": "Shared LoRA Subspaces for Almost Strict Continual Learning (first author) and Perceptual Taxonomy (senior author) were accepted to ECCV 2026.",
+    "url": "/publications/",
+    "links": [
+      {
+        "label": "Share",
+        "url": "https://toshi2k2.github.io/share/"
+      },
+      {
+        "label": "Perceptual Taxonomy",
+        "url": "https://perceptual-taxonomy.github.io/"
+      }
+    ]
+  },
+  {
     "date": "2026-06-03",
     "displayDate": "Jun 3-7, 2026",
     "tag": "CVPR",
