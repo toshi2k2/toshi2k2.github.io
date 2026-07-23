@@ -9,8 +9,10 @@ JavaScript for a light/dark theme toggle and publication BibTeX viewer.
 - `index.html` — Home page (hero, featured work, visibility, news, etc.).
 - `research/index.html` — Research stack + ideas.
 - `publications/index.html` — Publications with thematic/chronological toggle + BibTeX modal.
-- `roadmap/index.html`, `resources/index.html`, `talks/index.html`,
-  `leadership/index.html`, `press/index.html`, `contact/index.html` — Other top‑level pages.
+- `misc/index.html` — Talks, leadership, and press in one consolidated page.
+- `contact/index.html` — Contact information.
+- `roadmap/index.html`, `talks/index.html`, `leadership/index.html`, and
+  `press/index.html` — Compatibility routes to the consolidated sections.
 - `assets/css/research.css` — Main stylesheet for all updated pages.
 - `assets/js/theme-toggle.js` — Light/dark theme toggle logic.
 - `assets/js/site-news.js` — Renders homepage news from JSON with a static fallback.
@@ -149,11 +151,7 @@ Pages to update:
 - `index.html`
 - `research/index.html`
 - `publications/index.html`
-- `roadmap/index.html`
-- `resources/index.html`
-- `talks/index.html`
-- `leadership/index.html`
-- `press/index.html`
+- `misc/index.html`
 - `contact/index.html`
 
 Example:

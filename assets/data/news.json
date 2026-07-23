@@ -5,7 +5,15 @@
     "tag": "Talk",
     "title": "Research talk at Carnegie Mellon University",
     "summary": "Gave a research talk at CMU.",
-    "url": "/talks/"
+    "url": "/misc/#talks"
+  },
+  {
+    "date": "2026-06-21",
+    "displayDate": "Jun 21, 2026",
+    "tag": "Talk",
+    "title": "Research talk at Princeton's Vertaix lab",
+    "summary": "Gave a research talk at Vertaix, Princeton University.",
+    "url": "https://vertaix.princeton.edu/"
   },
   {
     "date": "2026-06-20",
@@ -37,7 +45,7 @@
     "date": "2026-05-29",
     "displayDate": "May 29, 2026",
     "tag": "Market",
-    "title": "I am on the job market for research positions in industry and academia.",
+    "title": "I am on the job market this year for research roles.",
     "summary": "Open to research roles spanning 3D vision, efficient learning, interpretability, and robust AI.",
     "url": "/cv/"
   },
@@ -55,15 +63,15 @@
     "tag": "Talk",
     "title": "Invited talk at Caltech Anima Lab",
     "summary": "Talk on structured 3D perception, efficient adaptation, and human-like learning.",
-    "url": "/talks/"
+    "url": "/misc/#talks"
   },
   {
     "date": "2026-01-15",
     "displayDate": "Jan 2026",
     "tag": "Talk",
     "title": "Invited talk at Levin Lab, Tufts University",
-    "summary": "Talk connecting cognitive AI, morphogenesis, and structured world models.",
-    "url": "/talks/"
+    "summary": "Universal Weight Subspace Hypothesis",
+    "url": "/misc/#talks"
   },
   {
     "date": "2026-02-20",

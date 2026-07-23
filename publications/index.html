@@ -27,13 +27,9 @@
         <nav class="site-nav" aria-label="Primary">
           <ul>
             <li><a href="/">Home</a></li>
-            <li><a href="/research/">Research</a></li>
             <li><a href="/publications/" aria-current="page">Publications</a></li>
-            <li><a href="/roadmap/">Roadmap</a></li>
-            <li><a href="/resources/">Datasets/Resources</a></li>
-            <li><a href="/talks/">Talks</a></li>
-            <li><a href="/leadership/">Leadership</a></li>
-            <li><a href="/press/">Press</a></li>
+            <li><a href="/research/">Research</a></li>
+            <li><a href="/misc/">Misc</a></li>
             <li><a href="/contact/">Contact</a></li>
           </ul>
         </nav>
@@ -53,7 +49,8 @@
       <header class="page-header">
         <h1>Publications</h1>
         <p>Search by concept, filter by research direction, then expand any paper for a concise abstract and links. Full list on <a href="https://scholar.google.com/citations?user=GXJRSLQAAAAJ" rel="external noopener" target="_blank">Google Scholar</a>.</p>
-        <p class="pub-header-note">Recent ECCV 2026 acceptances: <strong>Shared LoRA Subspaces</strong> (first author) and <strong>Perceptual Taxonomy</strong> (senior author).</p>
+        <p class="pub-author-note"><span aria-hidden="true">*</span> Equal contribution. <span aria-hidden="true">&dagger;</span> Co-last authorship.</p>
+        <!-- <p class="pub-header-note">Recent ECCV 2026 acceptances: <strong>Shared LoRA Subspaces</strong> (first author) and <strong>Perceptual Taxonomy</strong> (senior author).</p> -->
         <form class="pub-discovery" role="search" aria-label="Search and filter publications" onsubmit="return false;">
           <label for="pub-search">Find papers by idea, venue, or method</label>
           <input id="pub-search" type="search" data-pub-search placeholder="Try: 3D parts, subspace, LoRA, domain adaptation, OOD, diffusion" autocomplete="off">
@@ -113,12 +110,13 @@
                 <img src="/assets/img/publications/perceptual-taxonomy-shield.jpg" alt="Preview image for Perceptual Taxonomy cross-property reasoning" loading="lazy">
               </a>
             </figure>
-            <h3>Perceptual Taxonomy: Evaluating and Guiding Hierarchical Scene Reasoning in Vision-Language Models</h3>
+            <h3><a class="pub-title-link" href="https://perceptual-taxonomy.github.io/" rel="external noopener" target="_blank">Perceptual Taxonomy: Evaluating and Guiding Hierarchical Scene Reasoning in Vision-Language Models</a></h3>
+            <p class="pub-authors">Jonathan Lee*, Xingrui Wang*, &hellip;, Alan Yuille&dagger;, <strong>Prakhar Kaushik&dagger;</strong></p>
             <p class="pub-meta">
-              <span class="pub-role">Senior author</span>
+              <!-- <span class="pub-role">Co-last author</span> -->
               <span class="pub-venue">ECCV 2026</span>
             </p>
-            <p class="pub-summary">An ECCV 2026 framework for evaluating hierarchical scene reasoning in vision-language models.</p>
+            <p class="pub-summary">A framework for evaluating hierarchical scene reasoning in vision-language models.</p>
             <details class="pub-details">
               <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
@@ -135,7 +133,9 @@
             <figure class="pub-media">
               <video src="/assets/video/name-that-part-teaser.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Name That Part 3D part segmentation and naming teaser"></video>
             </figure>
-            <h3>Name That Part: 3D Part Segmentation and Naming</h3>
+            <h3><a class="pub-title-link" href="https://name-that-part.github.io/" rel="external noopener" target="_blank">Name That Part: 3D Part Segmentation and Naming</a></h3>
+            <p class="pub-authors"><span class="cofirst-order" data-cofirst-order aria-live="off"><span data-cofirst-primary><strong>Prakhar Kaushik*</strong></span><span data-cofirst-separator>, </span><span data-cofirst-peer>Soumava Paul*</span></span>, Ankit Vaidya, Anand Bhattad, Alan Yuille</p>
+            <p class="pub-meta"><span class="pub-venue">CVPR Findings 2026</span></p>
             <p class="pub-summary">Joint 3D part segmentation and semantic naming.</p>
             <details class="pub-details">
               <summary>Abstract, links &amp; BibTeX</summary>
@@ -149,14 +149,20 @@
             </details>
           </article>
 
-          <article class="pub-item">
-            <h3>Learning Part Segmentation from Synthetic Animals</h3>
-            <p class="pub-meta"><span class="pub-venue">WACV 2024</span></p>
+          <article class="pub-item pub-item--media">
+            <figure class="pub-media">
+              <a class="pub-media-link" href="/assets/img/publications/synthetic-parts-paper-figure.jpg">
+                <img src="/assets/img/publications/synthetic-parts-paper-figure.jpg" alt="Synthetic and real animal part segmentation examples from the paper" loading="lazy">
+              </a>
+            </figure>
+            <h3><a class="pub-title-link" href="https://openaccess.thecvf.com/content/WACV2024W/CV4Smalls/html/Peng_Learning_Part_Segmentation_From_Synthetic_Animals_WACVW_2024_paper.html" rel="external noopener" target="_blank">Learning Part Segmentation from Synthetic Animals</a></h3>
+            <p class="pub-meta"><span class="pub-venue">WACV Workshops 2024</span></p>
             <p class="pub-summary">Part segmentation learned from synthetic animal data.</p>
             <details class="pub-details">
               <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
-                <div>Preprint link coming soon.</div>
+                <div><a href="https://openaccess.thecvf.com/content/WACV2024W/CV4Smalls/html/Peng_Learning_Part_Segmentation_From_Synthetic_Animals_WACVW_2024_paper.html" rel="external noopener" target="_blank">Paper</a></div>
+                <div><a href="https://arxiv.org/abs/2311.18661" rel="external noopener" target="_blank">arXiv</a></div>
                 <div>
                   <a class="btn btn-secondary btn-small pub-bibtex-button" href="/assets/bibliography/your_paper.bib" data-bibtex-key="peng2024learning">BibTeX</a>
                 </div>
@@ -164,14 +170,20 @@
             </details>
           </article>
 
-          <article class="pub-item">
-            <h3>Animal3D: A Comprehensive Dataset of 3D Animal Pose and Shape</h3>
+          <article class="pub-item pub-item--media">
+            <figure class="pub-media">
+              <a class="pub-media-link" href="/assets/img/publications/animal3d-paper-figure.jpg">
+                <img src="/assets/img/publications/animal3d-paper-figure.jpg" alt="Animal3D dataset examples and reconstructed animal shapes from the paper" loading="lazy">
+              </a>
+            </figure>
+            <h3><a class="pub-title-link" href="https://openaccess.thecvf.com/content/ICCV2023/html/Xu_Animal3D_A_Comprehensive_Dataset_of_3D_Animal_Pose_and_Shape_ICCV_2023_paper.html" rel="external noopener" target="_blank">Animal3D: A Comprehensive Dataset of 3D Animal Pose and Shape</a></h3>
             <p class="pub-meta"><span class="pub-venue">ICCV 2023</span></p>
             <p class="pub-summary">A comprehensive dataset for 3D animal pose and shape.</p>
             <details class="pub-details">
               <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
-                <div>Preprint link coming soon.</div>
+                <div><a href="https://openaccess.thecvf.com/content/ICCV2023/html/Xu_Animal3D_A_Comprehensive_Dataset_of_3D_Animal_Pose_and_Shape_ICCV_2023_paper.html" rel="external noopener" target="_blank">Paper</a></div>
+                <div><a href="https://arxiv.org/abs/2308.11737" rel="external noopener" target="_blank">arXiv</a></div>
                 <div>
                   <a class="btn btn-secondary btn-small pub-bibtex-button" href="/assets/bibliography/your_paper.bib" data-bibtex-key="xu2023animal3d">BibTeX</a>
                 </div>
@@ -189,7 +201,8 @@
                 <img src="/assets/img/spotlight/unisub_thumb.jpg" alt="Preview image for The Universal Weight Subspace Hypothesis" loading="lazy">
               </a>
             </figure>
-            <h3>The Universal Weight Subspace Hypothesis</h3>
+            <h3><a class="pub-title-link" href="https://toshi2k2.github.io/unisub/" rel="external noopener" target="_blank">The Universal Weight Subspace Hypothesis</a></h3>
+            <p class="pub-authors"><strong>Prakhar Kaushik</strong>, Shravan Chaudhari, Ankit Vaidya, Rama Chellappa, Alan Yuille</p>
             <p class="pub-summary">A Physics of AI / mechanistic interpretability study showing that backprop-trained neural networks tend to converge to similar low-rank weight subspaces across datasets and hyperparameters.</p>
             <details class="pub-details">
               <summary>Abstract, links &amp; BibTeX</summary>
@@ -209,7 +222,8 @@
                 <img src="/assets/img/spotlight/eigenlorax_thumb.jpg" alt="Preview image for EigenLoRAx" loading="lazy">
               </a>
             </figure>
-            <h3>EigenLoRAx: Recycling Adapters to Find Principal Subspaces for Resource-Efficient Adaptation and Inference</h3>
+            <h3><a class="pub-title-link" href="https://eigenlora.webflow.io/" rel="external noopener" target="_blank">EigenLoRAx: Recycling Adapters to Find Principal Subspaces for Resource-Efficient Adaptation and Inference</a></h3>
+            <p class="pub-authors"><span class="cofirst-order" data-cofirst-order aria-live="off"><span data-cofirst-primary><strong>Prakhar Kaushik*</strong></span><span data-cofirst-separator>, </span><span data-cofirst-peer>Ankit Vaidya*</span></span>, Shravan Chaudhari, Alan Yuille</p>
             <p class="pub-meta">
               <span class="pub-oral">Oral</span>
               <span class="pub-venue">CVPR Workshops 2025</span>
@@ -230,16 +244,17 @@
 
           <article class="pub-item pub-item--media pub-item--accepted">
             <figure class="pub-media">
-              <a class="pub-media-link" href="/assets/img/publications/eflux.jpeg">
-                <img src="/assets/img/publications/eflux.jpeg" alt="Preview image for Shared LoRA Subspaces" loading="lazy">
+              <a class="pub-media-link" href="/assets/img/publications/share-paper-figure.jpg">
+                <img src="/assets/img/publications/share-paper-figure.jpg" alt="Share continual adaptation and merging method from the paper" loading="lazy">
               </a>
             </figure>
-            <h3>Shared LoRA Subspaces for Almost Strict Continual Learning</h3>
+            <h3><a class="pub-title-link" href="https://toshi2k2.github.io/share/" rel="external noopener" target="_blank">Shared LoRA Subspaces for almost Strict Continual Learning</a></h3>
+            <p class="pub-authors"><span class="cofirst-order" data-cofirst-order aria-live="off"><span data-cofirst-primary><strong>Prakhar Kaushik*</strong></span><span data-cofirst-separator>, </span><span data-cofirst-peer>Ankit Vaidya*</span></span>, Shravan Chaudhari, Rama Chellappa, Alan Yuille</p>
             <p class="pub-meta">
-              <span class="pub-role">First author</span>
+              <!-- <span class="pub-role">First author</span> -->
               <span class="pub-venue">ECCV 2026</span>
             </p>
-            <p class="pub-summary">An ECCV 2026 shared-subspace approach toward almost strict continual learning for large models.</p>
+            <p class="pub-summary">A shared-subspace approach toward almost strict continual learning for large models.</p>
             <details class="pub-details">
               <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
@@ -252,8 +267,14 @@
             </details>
           </article>
 
-          <article class="pub-item">
-            <h3>Understanding Catastrophic Forgetting and Remembering in Continual Learning with Optimal Relevance Mapping</h3>
+          <article class="pub-item pub-item--media">
+            <figure class="pub-media">
+              <a class="pub-media-link" href="/assets/img/publications/forgetting-paper-figure.jpg">
+                <img src="/assets/img/publications/forgetting-paper-figure.jpg" alt="Task inference accuracy matrix from the continual learning paper" loading="lazy">
+              </a>
+            </figure>
+            <h3><a class="pub-title-link" href="https://arxiv.org/abs/2102.11343" rel="external noopener" target="_blank">Understanding Catastrophic Forgetting and Remembering in Continual Learning with Optimal Relevance Mapping</a></h3>
+            <p class="pub-authors"><strong>Prakhar Kaushik</strong>, Alex Gain, Adam Kortylewski, Alan Yuille</p>
             <p class="pub-meta"><span class="pub-venue">NeurIPS Meta-Learning Workshop 2021</span></p>
             <p class="pub-summary">Continual learning with optimal relevance mapping.</p>
             <details class="pub-details">
@@ -268,13 +289,19 @@
             </details>
           </article>
 
-          <article class="pub-item">
-            <h3>iNeMo: Incremental Neural Mesh Models for Robust Class-Incremental Learning</h3>
+          <article class="pub-item pub-item--media">
+            <figure class="pub-media">
+              <a class="pub-media-link" href="/assets/img/publications/inemo-paper-figure.jpg">
+                <img src="/assets/img/publications/inemo-paper-figure.jpg" alt="Incremental neural mesh model pipeline from the iNeMo paper" loading="lazy">
+              </a>
+            </figure>
+            <h3><a class="pub-title-link" href="https://arxiv.org/abs/2407.09271" rel="external noopener" target="_blank">iNeMo: Incremental Neural Mesh Models for Robust Class-Incremental Learning</a></h3>
             <p class="pub-meta"><span class="pub-venue">ECCV 2024</span></p>
             <p class="pub-summary">Incremental neural mesh models for class-incremental learning.</p>
             <details class="pub-details">
               <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
+                <div><a href="https://arxiv.org/abs/2407.09271" rel="external noopener" target="_blank">arXiv</a></div>
                 <div><a href="https://github.com/fischer-tom/inemo" rel="external noopener" target="_blank">Code</a></div>
                 <div>
                   <a class="btn btn-secondary btn-small pub-bibtex-button" href="/assets/bibliography/your_paper.bib" data-bibtex-key="fischer2024inemo">BibTeX</a>
@@ -283,8 +310,14 @@
             </details>
           </article>
 
-          <article class="pub-item">
-            <h3>Adaptive Neural Connections for Sparsity Learning</h3>
+          <article class="pub-item pub-item--media">
+            <figure class="pub-media">
+              <a class="pub-media-link" href="/assets/img/publications/adaptive-paper-figure.jpg">
+                <img src="/assets/img/publications/adaptive-paper-figure.jpg" alt="Learned adaptive neural connection kernels from the paper" loading="lazy">
+              </a>
+            </figure>
+            <h3><a class="pub-title-link" href="https://openaccess.thecvf.com/content_WACV_2020/html/Gain_Adaptive_Neural_Connections_for_Sparsity_Learning_WACV_2020_paper.html" rel="external noopener" target="_blank">Adaptive Neural Connections for Sparsity Learning</a></h3>
+            <p class="pub-authors"><span class="cofirst-order" data-cofirst-order aria-live="off"><span data-cofirst-primary><strong>Prakhar Kaushik*</strong></span><span data-cofirst-separator>, </span><span data-cofirst-peer>Alex Gain*</span></span>, Hava Siegelmann</p>
             <p class="pub-meta"><span class="pub-venue">WACV 2020</span></p>
             <p class="pub-summary">Adaptive neural connectivity for sparsity-aware learning.</p>
             <details class="pub-details">
@@ -306,7 +339,8 @@
             <figure class="pub-media">
               <video src="/assets/video/can-these-views-gaussian-noise.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Hallucinated 3D geometry from Gaussian noise"></video>
             </figure>
-            <h3>Can These Views Be One Scene? Evaluating Multiview 3D Consistency when 3D Foundation Models Hallucinate</h3>
+            <h3><a class="pub-title-link" href="https://mvp18.github.io/3d-consistency-metrics/" rel="external noopener" target="_blank">Can These Views Be One Scene? Evaluating Multiview 3D Consistency when 3D Foundation Models Hallucinate</a></h3>
+            <p class="pub-authors"><span class="cofirst-order" data-cofirst-order aria-live="off"><span data-cofirst-primary><strong>Prakhar Kaushik*</strong></span><span data-cofirst-separator>, </span><span data-cofirst-peer>Soumava Paul*</span></span>, Alan Yuille</p>
             <p class="pub-meta"><span class="pub-venue">arXiv 2026</span></p>
             <p class="pub-summary">Failure-aware multiview 3D consistency metrics for hallucination-prone foundation reconstruction models.</p>
             <details class="pub-details">
@@ -329,7 +363,8 @@
                 <img src="/assets/img/publications/3dcomp.png" alt="Preview image for Scaling 3D Compositional Models" loading="lazy">
               </a>
             </figure>
-            <h3>Scaling 3D Compositional Models for Robust Classification and Pose Estimation</h3>
+            <h3><a class="pub-title-link" href="https://openaccess.thecvf.com/content/ICCV2025/html/Yuan_Scaling_3D_Compositional_Models_for_Robust_Classification_and_Pose_Estimation_ICCV_2025_paper.html" rel="external noopener" target="_blank">Scaling 3D Compositional Models for Robust Classification and Pose Estimation</a></h3>
+            <p class="pub-authors"><strong>Prakhar Kaushik*</strong>, Xiaoding Yuan*, Guofeng Zhang*, Artur Jesslen, Adam Kortylewski, Alan Yuille</p>
             <p class="pub-meta"><span class="pub-venue">ICCV 2025</span></p>
             <p class="pub-summary">Scaling compositional models for robust 3D classification and pose.</p>
             <details class="pub-details">
@@ -349,7 +384,8 @@
                 <img src="/assets/img/publications/poseuda.jpg" alt="Preview image for Source-Free and Image-Only Unsupervised Domain Adaptation" loading="lazy">
               </a>
             </figure>
-            <h3>Source-Free and Image-Only Unsupervised Domain Adaptation for Category-Level Object Pose Estimation</h3>
+            <h3><a class="pub-title-link" href="https://toshi2k2.github.io/adaptbycomp/" rel="external noopener" target="_blank">Source-Free and Image-Only Unsupervised Domain Adaptation for Category-Level Object Pose Estimation</a></h3>
+            <p class="pub-authors"><strong>Prakhar Kaushik</strong>, Aayush Mishra, Adam Kortylewski, Alan Yuille</p>
             <p class="pub-meta"><span class="pub-venue">ICLR 2024</span></p>
             <p class="pub-summary">Source-free domain adaptation for category-level pose estimation.</p>
             <details class="pub-details">
@@ -370,13 +406,14 @@
                 <img src="/assets/img/publications/ugt.jpeg" alt="Preview image for A Bayesian Approach to OOD Robustness" loading="lazy">
               </a>
             </figure>
-            <h3>A Bayesian Approach to OOD Robustness in Image Classification</h3>
+            <h3><a class="pub-title-link" href="https://toshi2k2.github.io/adaptbycomp/" rel="external noopener" target="_blank">A Bayesian Approach to OOD Robustness in Image Classification</a></h3>
+            <p class="pub-authors"><strong>Prakhar Kaushik</strong>, Adam Kortylewski, Alan Yuille</p>
             <p class="pub-meta"><span class="pub-venue">CVPR 2024</span></p>
             <p class="pub-summary">Bayesian OOD robustness in image classification.</p>
             <details class="pub-details">
               <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
-                <div>Preprint link coming soon.</div>
+                <div><a href="https://openaccess.thecvf.com/content/CVPR2024/html/Kaushik_A_Bayesian_Approach_to_OOD_Robustness_in_Image_Classification_CVPR_2024_paper.html" rel="external noopener" target="_blank">Paper</a></div>
                 <div><a href="https://toshi2k2.github.io/adaptbycomp/" rel="external noopener" target="_blank">Website</a></div>
                 <div><a href="https://github.com/toshi2k2/CompnetDA" rel="external noopener" target="_blank">Code</a></div>
                 <div>
@@ -390,8 +427,13 @@
         <section class="publication-section" id="theme-generative">
           <h2>Generative &amp; Alignment</h2>
 
-          <article class="pub-item">
-            <h3>TriDiff-4D: Fast 4D Generation through Diffusion-based Triplane Re-posing</h3>
+          <article class="pub-item pub-item--media">
+            <figure class="pub-media">
+              <a class="pub-media-link" href="/assets/img/publications/tridiff-paper-figure.jpg">
+                <img src="/assets/img/publications/tridiff-paper-figure.jpg" alt="Generated animated character examples from the TriDiff-4D paper" loading="lazy">
+              </a>
+            </figure>
+            <h3><a class="pub-title-link" href="https://arxiv.org/abs/2511.16662" rel="external noopener" target="_blank">TriDiff-4D: Fast 4D Generation through Diffusion-based Triplane Re-posing</a></h3>
             <p class="pub-summary">Fast 4D generation through diffusion-based triplane re-posing.</p>
             <details class="pub-details">
               <summary>Abstract, links &amp; BibTeX</summary>
@@ -410,7 +452,8 @@
                 <img src="/assets/img/spotlight/gaussian_scenes_thumb.jpg" alt="Preview image for Gaussian Scenes" loading="lazy">
               </a>
             </figure>
-            <h3>Gaussian Scenes: Pose-Free Sparse-View Scene Reconstruction using Depth-Enhanced Diffusion Priors</h3>
+            <h3><a class="pub-title-link" href="https://gaussianscenes.github.io/" rel="external noopener" target="_blank">Gaussian Scenes: Pose-Free Sparse-View Scene Reconstruction using Depth-Enhanced Diffusion Priors</a></h3>
+            <p class="pub-authors">Soumava Paul, <strong>Prakhar Kaushik</strong>, Alan Yuille</p>
             <p class="pub-meta"><span class="pub-venue">TMLR 2025</span></p>
             <p class="pub-summary">Pose-free sparse-view scene reconstruction using diffusion priors.</p>
             <details class="pub-details">
@@ -425,8 +468,13 @@
             </details>
           </article>
 
-          <article class="pub-item">
-            <h3>Progressive Prompt Detailing for Improved Alignment in Text-to-Image Generative Models</h3>
+          <article class="pub-item pub-item--media">
+            <figure class="pub-media">
+              <a class="pub-media-link" href="/assets/img/publications/scope-paper-figure.jpg">
+                <img src="/assets/img/publications/scope-paper-figure.jpg" alt="Baseline and SCoPE text-to-image alignment examples from the paper" loading="lazy">
+              </a>
+            </figure>
+            <h3><a class="pub-title-link" href="https://arxiv.org/abs/2503.17794" rel="external noopener" target="_blank">Progressive Prompt Detailing for Improved Alignment in Text-to-Image Generative Models</a></h3>
             <p class="pub-meta">
               <span class="pub-oral">Oral</span>
               <span class="pub-venue">CVPR Workshops 2025</span>
@@ -448,13 +496,14 @@
           <h2>Security &amp; Systems</h2>
 
           <article class="pub-item">
-            <h3>An Offline Outdoor Navigation System with Full Privacy</h3>
+            <h3><a class="pub-title-link" href="https://www.scitepress.org/PublishedPapers/2017/64738/" rel="external noopener" target="_blank">An Offline Outdoor Navigation System with Full Privacy</a></h3>
+            <p class="pub-authors"><strong>Prakhar Kaushik</strong>, Vishal Saraswat, Francesco Buccafurri</p>
             <p class="pub-meta"><span class="pub-venue">WINSYS 2017</span></p>
             <p class="pub-summary">Offline outdoor navigation with full privacy.</p>
             <details class="pub-details">
               <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
-                <div>Preprint link coming soon.</div>
+                <div><a href="https://www.scitepress.org/PublishedPapers/2017/64738/" rel="external noopener" target="_blank">Conference paper</a></div>
                 <div>
                   <a class="btn btn-secondary btn-small pub-bibtex-button" href="/assets/bibliography/your_paper.bib" data-bibtex-key="kaushik2017offline">BibTeX</a>
                 </div>
@@ -463,13 +512,14 @@
           </article>
 
           <article class="pub-item">
-            <h3>Timing Attack Analysis on AES on Modern Processors</h3>
+            <h3><a class="pub-title-link" href="https://doi.org/10.1109/ICRITO.2017.8342471" rel="external noopener" target="_blank">Timing Attack Analysis on AES on Modern Processors</a></h3>
+            <p class="pub-authors"><strong>Prakhar Kaushik</strong>, Rana Majumdar</p>
             <p class="pub-meta"><span class="pub-venue">ICRITO 2017</span></p>
             <p class="pub-summary">Timing attack analysis on AES on modern processors.</p>
             <details class="pub-details">
               <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
-                <div>Preprint link coming soon.</div>
+                <div><a href="https://doi.org/10.1109/ICRITO.2017.8342471" rel="external noopener" target="_blank">Conference paper</a></div>
                 <div>
                   <a class="btn btn-secondary btn-small pub-bibtex-button" href="/assets/bibliography/your_paper.bib" data-bibtex-key="kaushik2017timing">BibTeX</a>
                 </div>
@@ -478,13 +528,14 @@
           </article>
 
           <article class="pub-item">
-            <h3>Radar as a Security Measure: Real-Time Neural Model-Based Human Detection and Behavior Classification</h3>
+            <h3><a class="pub-title-link" href="https://doi.org/10.1109/GlobalSIP45357.2019.8969161" rel="external noopener" target="_blank">Radar as a Security Measure - Real Time Neural Model based Human Detection and Behaviour Classification</a></h3>
+            <p class="pub-authors"><strong>Prakhar Kaushik</strong></p>
             <p class="pub-meta"><span class="pub-venue">GlobalSIP 2019</span></p>
-            <p class="pub-summary">Real-time neural model-based human detection and behavior classification.</p>
+            <p class="pub-summary">Real-time neural model-based human detection and behaviour classification.</p>
             <details class="pub-details">
               <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
-                <div>Preprint link coming soon.</div>
+                <div><a href="https://doi.org/10.1109/GlobalSIP45357.2019.8969161" rel="external noopener" target="_blank">Conference paper</a></div>
                 <div>
                   <a class="btn btn-secondary btn-small pub-bibtex-button" href="/assets/bibliography/your_paper.bib" data-bibtex-key="kaushik2019radar">BibTeX</a>
                 </div>
@@ -500,16 +551,17 @@
 
           <article class="pub-item pub-item--media pub-item--accepted">
             <figure class="pub-media">
-              <a class="pub-media-link" href="/assets/img/publications/eflux.jpeg">
-                <img src="/assets/img/publications/eflux.jpeg" alt="Preview image for Shared LoRA Subspaces" loading="lazy">
+              <a class="pub-media-link" href="/assets/img/publications/share-paper-figure.jpg">
+                <img src="/assets/img/publications/share-paper-figure.jpg" alt="Share continual adaptation and merging method from the paper" loading="lazy">
               </a>
             </figure>
-            <h3>Shared LoRA Subspaces for Almost Strict Continual Learning</h3>
+            <h3><a class="pub-title-link" href="https://toshi2k2.github.io/share/" rel="external noopener" target="_blank">Shared LoRA Subspaces for almost Strict Continual Learning</a></h3>
+            <p class="pub-authors"><span class="cofirst-order" data-cofirst-order aria-live="off"><span data-cofirst-primary><strong>Prakhar Kaushik*</strong></span><span data-cofirst-separator>, </span><span data-cofirst-peer>Ankit Vaidya*</span></span>, Shravan Chaudhari, Rama Chellappa, Alan Yuille</p>
             <p class="pub-meta">
-              <span class="pub-role">First author</span>
+              <!-- <span class="pub-role">First author</span> -->
               <span class="pub-venue">ECCV 2026</span>
             </p>
-            <p class="pub-summary">An ECCV 2026 shared-subspace approach toward almost strict continual learning for large models.</p>
+            <p class="pub-summary">A shared-subspace approach toward almost strict continual learning for large models.</p>
             <details class="pub-details">
               <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
@@ -528,12 +580,13 @@
                 <img src="/assets/img/publications/perceptual-taxonomy-shield.jpg" alt="Preview image for Perceptual Taxonomy cross-property reasoning" loading="lazy">
               </a>
             </figure>
-            <h3>Perceptual Taxonomy: Evaluating and Guiding Hierarchical Scene Reasoning in Vision-Language Models</h3>
+            <h3><a class="pub-title-link" href="https://perceptual-taxonomy.github.io/" rel="external noopener" target="_blank">Perceptual Taxonomy: Evaluating and Guiding Hierarchical Scene Reasoning in Vision-Language Models</a></h3>
+            <p class="pub-authors">Jonathan Lee*, Xingrui Wang*, &hellip;, Alan Yuille&dagger;, <strong>Prakhar Kaushik&dagger;</strong></p>
             <p class="pub-meta">
-              <span class="pub-role">Senior author</span>
+              <!-- <span class="pub-role">Co-last author</span> -->
               <span class="pub-venue">ECCV 2026</span>
             </p>
-            <p class="pub-summary">An ECCV 2026 framework for evaluating hierarchical scene reasoning in vision-language models.</p>
+            <p class="pub-summary">A framework for evaluating hierarchical scene reasoning in vision-language models.</p>
             <details class="pub-details">
               <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
@@ -550,7 +603,8 @@
             <figure class="pub-media">
               <video src="/assets/video/can-these-views-gaussian-noise.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Hallucinated 3D geometry from Gaussian noise"></video>
             </figure>
-            <h3>Can These Views Be One Scene? Evaluating Multiview 3D Consistency when 3D Foundation Models Hallucinate</h3>
+            <h3><a class="pub-title-link" href="https://mvp18.github.io/3d-consistency-metrics/" rel="external noopener" target="_blank">Can These Views Be One Scene? Evaluating Multiview 3D Consistency when 3D Foundation Models Hallucinate</a></h3>
+            <p class="pub-authors"><span class="cofirst-order" data-cofirst-order aria-live="off"><span data-cofirst-primary><strong>Prakhar Kaushik*</strong></span><span data-cofirst-separator>, </span><span data-cofirst-peer>Soumava Paul*</span></span>, Alan Yuille</p>
             <p class="pub-meta"><span class="pub-venue">arXiv 2026</span></p>
             <p class="pub-summary">Failure-aware multiview 3D consistency metrics for hallucination-prone foundation reconstruction models.</p>
             <details class="pub-details">
@@ -571,7 +625,9 @@
             <figure class="pub-media">
               <video src="/assets/video/name-that-part-teaser.mp4" autoplay muted loop playsinline preload="metadata" aria-label="Name That Part 3D part segmentation and naming teaser"></video>
             </figure>
-            <h3>Name That Part: 3D Part Segmentation and Naming</h3>
+            <h3><a class="pub-title-link" href="https://name-that-part.github.io/" rel="external noopener" target="_blank">Name That Part: 3D Part Segmentation and Naming</a></h3>
+            <p class="pub-authors"><span class="cofirst-order" data-cofirst-order aria-live="off"><span data-cofirst-primary><strong>Prakhar Kaushik*</strong></span><span data-cofirst-separator>, </span><span data-cofirst-peer>Soumava Paul*</span></span>, Ankit Vaidya, Anand Bhattad, Alan Yuille</p>
+            <p class="pub-meta"><span class="pub-venue">CVPR Findings 2026</span></p>
             <p class="pub-summary">Joint 3D part segmentation and semantic naming.</p>
             <details class="pub-details">
               <summary>Abstract, links &amp; BibTeX</summary>
@@ -595,7 +651,8 @@
                 <img src="/assets/img/spotlight/unisub_thumb.jpg" alt="Preview image for The Universal Weight Subspace Hypothesis" loading="lazy">
               </a>
             </figure>
-            <h3>The Universal Weight Subspace Hypothesis</h3>
+            <h3><a class="pub-title-link" href="https://toshi2k2.github.io/unisub/" rel="external noopener" target="_blank">The Universal Weight Subspace Hypothesis</a></h3>
+            <p class="pub-authors"><strong>Prakhar Kaushik</strong>, Shravan Chaudhari, Ankit Vaidya, Rama Chellappa, Alan Yuille</p>
             <p class="pub-summary">A Physics of AI / mechanistic interpretability study showing that backprop-trained neural networks tend to converge to similar low-rank weight subspaces across datasets and hyperparameters.</p>
             <details class="pub-details">
               <summary>Abstract, links &amp; BibTeX</summary>
@@ -615,7 +672,8 @@
                 <img src="/assets/img/publications/3dcomp.png" alt="Preview image for Scaling 3D Compositional Models" loading="lazy">
               </a>
             </figure>
-            <h3>Scaling 3D Compositional Models for Robust Classification and Pose Estimation</h3>
+            <h3><a class="pub-title-link" href="https://openaccess.thecvf.com/content/ICCV2025/html/Yuan_Scaling_3D_Compositional_Models_for_Robust_Classification_and_Pose_Estimation_ICCV_2025_paper.html" rel="external noopener" target="_blank">Scaling 3D Compositional Models for Robust Classification and Pose Estimation</a></h3>
+            <p class="pub-authors"><strong>Prakhar Kaushik*</strong>, Xiaoding Yuan*, Guofeng Zhang*, Artur Jesslen, Adam Kortylewski, Alan Yuille</p>
             <p class="pub-meta"><span class="pub-venue">ICCV 2025</span></p>
             <p class="pub-summary">Scaling compositional models for robust 3D classification and pose.</p>
             <details class="pub-details">
@@ -629,8 +687,13 @@
             </details>
           </article>
 
-          <article class="pub-item">
-            <h3>TriDiff-4D: Fast 4D Generation through Diffusion-based Triplane Re-posing</h3>
+          <article class="pub-item pub-item--media">
+            <figure class="pub-media">
+              <a class="pub-media-link" href="/assets/img/publications/tridiff-paper-figure.jpg">
+                <img src="/assets/img/publications/tridiff-paper-figure.jpg" alt="Generated animated character examples from the TriDiff-4D paper" loading="lazy">
+              </a>
+            </figure>
+            <h3><a class="pub-title-link" href="https://arxiv.org/abs/2511.16662" rel="external noopener" target="_blank">TriDiff-4D: Fast 4D Generation through Diffusion-based Triplane Re-posing</a></h3>
             <p class="pub-summary">Fast 4D generation through diffusion-based triplane re-posing.</p>
             <details class="pub-details">
               <summary>Abstract, links &amp; BibTeX</summary>
@@ -649,7 +712,8 @@
                 <img src="/assets/img/spotlight/gaussian_scenes_thumb.jpg" alt="Preview image for Gaussian Scenes" loading="lazy">
               </a>
             </figure>
-            <h3>Gaussian Scenes: Pose-Free Sparse-View Scene Reconstruction using Depth-Enhanced Diffusion Priors</h3>
+            <h3><a class="pub-title-link" href="https://gaussianscenes.github.io/" rel="external noopener" target="_blank">Gaussian Scenes: Pose-Free Sparse-View Scene Reconstruction using Depth-Enhanced Diffusion Priors</a></h3>
+            <p class="pub-authors">Soumava Paul, <strong>Prakhar Kaushik</strong>, Alan Yuille</p>
             <p class="pub-meta"><span class="pub-venue">TMLR 2025</span></p>
             <p class="pub-summary">Pose-free sparse-view scene reconstruction using diffusion priors.</p>
             <details class="pub-details">
@@ -664,8 +728,13 @@
             </details>
           </article>
 
-          <article class="pub-item">
-            <h3>Progressive Prompt Detailing for Improved Alignment in Text-to-Image Generative Models</h3>
+          <article class="pub-item pub-item--media">
+            <figure class="pub-media">
+              <a class="pub-media-link" href="/assets/img/publications/scope-paper-figure.jpg">
+                <img src="/assets/img/publications/scope-paper-figure.jpg" alt="Baseline and SCoPE text-to-image alignment examples from the paper" loading="lazy">
+              </a>
+            </figure>
+            <h3><a class="pub-title-link" href="https://arxiv.org/abs/2503.17794" rel="external noopener" target="_blank">Progressive Prompt Detailing for Improved Alignment in Text-to-Image Generative Models</a></h3>
             <p class="pub-meta">
               <span class="pub-oral">Oral</span>
               <span class="pub-venue">CVPR Workshops 2025</span>
@@ -688,7 +757,8 @@
                 <img src="/assets/img/spotlight/eigenlorax_thumb.jpg" alt="Preview image for EigenLoRAx" loading="lazy">
               </a>
             </figure>
-            <h3>EigenLoRAx: Recycling Adapters to Find Principal Subspaces for Resource-Efficient Adaptation and Inference</h3>
+            <h3><a class="pub-title-link" href="https://eigenlora.webflow.io/" rel="external noopener" target="_blank">EigenLoRAx: Recycling Adapters to Find Principal Subspaces for Resource-Efficient Adaptation and Inference</a></h3>
+            <p class="pub-authors"><span class="cofirst-order" data-cofirst-order aria-live="off"><span data-cofirst-primary><strong>Prakhar Kaushik*</strong></span><span data-cofirst-separator>, </span><span data-cofirst-peer>Ankit Vaidya*</span></span>, Shravan Chaudhari, Alan Yuille</p>
             <p class="pub-meta">
               <span class="pub-oral">Oral</span>
               <span class="pub-venue">CVPR Workshops 2025</span>
@@ -712,13 +782,19 @@
         <section class="publication-section">
           <h2>2024</h2>
 
-          <article class="pub-item">
-            <h3>iNeMo: Incremental Neural Mesh Models for Robust Class-Incremental Learning</h3>
+          <article class="pub-item pub-item--media">
+            <figure class="pub-media">
+              <a class="pub-media-link" href="/assets/img/publications/inemo-paper-figure.jpg">
+                <img src="/assets/img/publications/inemo-paper-figure.jpg" alt="Incremental neural mesh model pipeline from the iNeMo paper" loading="lazy">
+              </a>
+            </figure>
+            <h3><a class="pub-title-link" href="https://arxiv.org/abs/2407.09271" rel="external noopener" target="_blank">iNeMo: Incremental Neural Mesh Models for Robust Class-Incremental Learning</a></h3>
             <p class="pub-meta"><span class="pub-venue">ECCV 2024</span></p>
             <p class="pub-summary">Incremental neural mesh models for class-incremental learning.</p>
             <details class="pub-details">
               <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
+                <div><a href="https://arxiv.org/abs/2407.09271" rel="external noopener" target="_blank">arXiv</a></div>
                 <div><a href="https://github.com/fischer-tom/inemo" rel="external noopener" target="_blank">Code</a></div>
                 <div>
                   <a class="btn btn-secondary btn-small pub-bibtex-button" href="/assets/bibliography/your_paper.bib" data-bibtex-key="fischer2024inemo">BibTeX</a>
@@ -727,14 +803,20 @@
             </details>
           </article>
 
-          <article class="pub-item">
-            <h3>Learning Part Segmentation from Synthetic Animals</h3>
-            <p class="pub-meta"><span class="pub-venue">WACV 2024</span></p>
+          <article class="pub-item pub-item--media">
+            <figure class="pub-media">
+              <a class="pub-media-link" href="/assets/img/publications/synthetic-parts-paper-figure.jpg">
+                <img src="/assets/img/publications/synthetic-parts-paper-figure.jpg" alt="Synthetic and real animal part segmentation examples from the paper" loading="lazy">
+              </a>
+            </figure>
+            <h3><a class="pub-title-link" href="https://openaccess.thecvf.com/content/WACV2024W/CV4Smalls/html/Peng_Learning_Part_Segmentation_From_Synthetic_Animals_WACVW_2024_paper.html" rel="external noopener" target="_blank">Learning Part Segmentation from Synthetic Animals</a></h3>
+            <p class="pub-meta"><span class="pub-venue">WACV Workshops 2024</span></p>
             <p class="pub-summary">Part segmentation learned from synthetic animal data.</p>
             <details class="pub-details">
               <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
-                <div>Preprint link coming soon.</div>
+                <div><a href="https://openaccess.thecvf.com/content/WACV2024W/CV4Smalls/html/Peng_Learning_Part_Segmentation_From_Synthetic_Animals_WACVW_2024_paper.html" rel="external noopener" target="_blank">Paper</a></div>
+                <div><a href="https://arxiv.org/abs/2311.18661" rel="external noopener" target="_blank">arXiv</a></div>
                 <div>
                   <a class="btn btn-secondary btn-small pub-bibtex-button" href="/assets/bibliography/your_paper.bib" data-bibtex-key="peng2024learning">BibTeX</a>
                 </div>
@@ -748,7 +830,8 @@
                 <img src="/assets/img/publications/poseuda.jpg" alt="Preview image for Source-Free and Image-Only Unsupervised Domain Adaptation" loading="lazy">
               </a>
             </figure>
-            <h3>Source-Free and Image-Only Unsupervised Domain Adaptation for Category-Level Object Pose Estimation</h3>
+            <h3><a class="pub-title-link" href="https://toshi2k2.github.io/adaptbycomp/" rel="external noopener" target="_blank">Source-Free and Image-Only Unsupervised Domain Adaptation for Category-Level Object Pose Estimation</a></h3>
+            <p class="pub-authors"><strong>Prakhar Kaushik</strong>, Aayush Mishra, Adam Kortylewski, Alan Yuille</p>
             <p class="pub-meta"><span class="pub-venue">ICLR 2024</span></p>
             <p class="pub-summary">Source-free domain adaptation for category-level pose estimation.</p>
             <details class="pub-details">
@@ -769,13 +852,14 @@
                 <img src="/assets/img/publications/ugt.jpeg" alt="Preview image for A Bayesian Approach to OOD Robustness" loading="lazy">
               </a>
             </figure>
-            <h3>A Bayesian Approach to OOD Robustness in Image Classification</h3>
+            <h3><a class="pub-title-link" href="https://toshi2k2.github.io/adaptbycomp/" rel="external noopener" target="_blank">A Bayesian Approach to OOD Robustness in Image Classification</a></h3>
+            <p class="pub-authors"><strong>Prakhar Kaushik</strong>, Adam Kortylewski, Alan Yuille</p>
             <p class="pub-meta"><span class="pub-venue">CVPR 2024</span></p>
             <p class="pub-summary">Bayesian OOD robustness in image classification.</p>
             <details class="pub-details">
               <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
-                <div>Preprint link coming soon.</div>
+                <div><a href="https://openaccess.thecvf.com/content/CVPR2024/html/Kaushik_A_Bayesian_Approach_to_OOD_Robustness_in_Image_Classification_CVPR_2024_paper.html" rel="external noopener" target="_blank">Paper</a></div>
                 <div><a href="https://toshi2k2.github.io/adaptbycomp/" rel="external noopener" target="_blank">Website</a></div>
                 <div><a href="https://github.com/toshi2k2/CompnetDA" rel="external noopener" target="_blank">Code</a></div>
                 <div>
@@ -789,14 +873,20 @@
         <section class="publication-section">
           <h2>2023</h2>
 
-          <article class="pub-item">
-            <h3>Animal3D: A Comprehensive Dataset of 3D Animal Pose and Shape</h3>
+          <article class="pub-item pub-item--media">
+            <figure class="pub-media">
+              <a class="pub-media-link" href="/assets/img/publications/animal3d-paper-figure.jpg">
+                <img src="/assets/img/publications/animal3d-paper-figure.jpg" alt="Animal3D dataset examples and reconstructed animal shapes from the paper" loading="lazy">
+              </a>
+            </figure>
+            <h3><a class="pub-title-link" href="https://openaccess.thecvf.com/content/ICCV2023/html/Xu_Animal3D_A_Comprehensive_Dataset_of_3D_Animal_Pose_and_Shape_ICCV_2023_paper.html" rel="external noopener" target="_blank">Animal3D: A Comprehensive Dataset of 3D Animal Pose and Shape</a></h3>
             <p class="pub-meta"><span class="pub-venue">ICCV 2023</span></p>
             <p class="pub-summary">A comprehensive dataset for 3D animal pose and shape.</p>
             <details class="pub-details">
               <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
-                <div>Preprint link coming soon.</div>
+                <div><a href="https://openaccess.thecvf.com/content/ICCV2023/html/Xu_Animal3D_A_Comprehensive_Dataset_of_3D_Animal_Pose_and_Shape_ICCV_2023_paper.html" rel="external noopener" target="_blank">Paper</a></div>
+                <div><a href="https://arxiv.org/abs/2308.11737" rel="external noopener" target="_blank">arXiv</a></div>
                 <div>
                   <a class="btn btn-secondary btn-small pub-bibtex-button" href="/assets/bibliography/your_paper.bib" data-bibtex-key="xu2023animal3d">BibTeX</a>
                 </div>
@@ -808,8 +898,14 @@
         <section class="publication-section">
           <h2>2021</h2>
 
-          <article class="pub-item">
-            <h3>Understanding Catastrophic Forgetting and Remembering in Continual Learning with Optimal Relevance Mapping</h3>
+          <article class="pub-item pub-item--media">
+            <figure class="pub-media">
+              <a class="pub-media-link" href="/assets/img/publications/forgetting-paper-figure.jpg">
+                <img src="/assets/img/publications/forgetting-paper-figure.jpg" alt="Task inference accuracy matrix from the continual learning paper" loading="lazy">
+              </a>
+            </figure>
+            <h3><a class="pub-title-link" href="https://arxiv.org/abs/2102.11343" rel="external noopener" target="_blank">Understanding Catastrophic Forgetting and Remembering in Continual Learning with Optimal Relevance Mapping</a></h3>
+            <p class="pub-authors"><strong>Prakhar Kaushik</strong>, Alex Gain, Adam Kortylewski, Alan Yuille</p>
             <p class="pub-meta"><span class="pub-venue">NeurIPS Meta-Learning Workshop 2021</span></p>
             <p class="pub-summary">Continual learning with optimal relevance mapping.</p>
             <details class="pub-details">
@@ -828,8 +924,14 @@
         <section class="publication-section">
           <h2>2020</h2>
 
-          <article class="pub-item">
-            <h3>Adaptive Neural Connections for Sparsity Learning</h3>
+          <article class="pub-item pub-item--media">
+            <figure class="pub-media">
+              <a class="pub-media-link" href="/assets/img/publications/adaptive-paper-figure.jpg">
+                <img src="/assets/img/publications/adaptive-paper-figure.jpg" alt="Learned adaptive neural connection kernels from the paper" loading="lazy">
+              </a>
+            </figure>
+            <h3><a class="pub-title-link" href="https://openaccess.thecvf.com/content_WACV_2020/html/Gain_Adaptive_Neural_Connections_for_Sparsity_Learning_WACV_2020_paper.html" rel="external noopener" target="_blank">Adaptive Neural Connections for Sparsity Learning</a></h3>
+            <p class="pub-authors"><span class="cofirst-order" data-cofirst-order aria-live="off"><span data-cofirst-primary><strong>Prakhar Kaushik*</strong></span><span data-cofirst-separator>, </span><span data-cofirst-peer>Alex Gain*</span></span>, Hava Siegelmann</p>
             <p class="pub-meta"><span class="pub-venue">WACV 2020</span></p>
             <p class="pub-summary">Adaptive neural connectivity for sparsity-aware learning.</p>
             <details class="pub-details">
@@ -848,13 +950,14 @@
           <h2>2019</h2>
 
           <article class="pub-item">
-            <h3>Radar as a Security Measure: Real-Time Neural Model-Based Human Detection and Behavior Classification</h3>
+            <h3><a class="pub-title-link" href="https://doi.org/10.1109/GlobalSIP45357.2019.8969161" rel="external noopener" target="_blank">Radar as a Security Measure - Real Time Neural Model based Human Detection and Behaviour Classification</a></h3>
+            <p class="pub-authors"><strong>Prakhar Kaushik</strong></p>
             <p class="pub-meta"><span class="pub-venue">GlobalSIP 2019</span></p>
-            <p class="pub-summary">Real-time neural model-based human detection and behavior classification.</p>
+            <p class="pub-summary">Real-time neural model-based human detection and behaviour classification.</p>
             <details class="pub-details">
               <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
-                <div>Preprint link coming soon.</div>
+                <div><a href="https://doi.org/10.1109/GlobalSIP45357.2019.8969161" rel="external noopener" target="_blank">Conference paper</a></div>
                 <div>
                   <a class="btn btn-secondary btn-small pub-bibtex-button" href="/assets/bibliography/your_paper.bib" data-bibtex-key="kaushik2019radar">BibTeX</a>
                 </div>
@@ -867,13 +970,14 @@
           <h2>2017</h2>
 
           <article class="pub-item">
-            <h3>An Offline Outdoor Navigation System with Full Privacy</h3>
+            <h3><a class="pub-title-link" href="https://www.scitepress.org/PublishedPapers/2017/64738/" rel="external noopener" target="_blank">An Offline Outdoor Navigation System with Full Privacy</a></h3>
+            <p class="pub-authors"><strong>Prakhar Kaushik</strong>, Vishal Saraswat, Francesco Buccafurri</p>
             <p class="pub-meta"><span class="pub-venue">WINSYS 2017</span></p>
             <p class="pub-summary">Offline outdoor navigation with full privacy.</p>
             <details class="pub-details">
               <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
-                <div>Preprint link coming soon.</div>
+                <div><a href="https://www.scitepress.org/PublishedPapers/2017/64738/" rel="external noopener" target="_blank">Conference paper</a></div>
                 <div>
                   <a class="btn btn-secondary btn-small pub-bibtex-button" href="/assets/bibliography/your_paper.bib" data-bibtex-key="kaushik2017offline">BibTeX</a>
                 </div>
@@ -882,13 +986,14 @@
           </article>
 
           <article class="pub-item">
-            <h3>Timing Attack Analysis on AES on Modern Processors</h3>
+            <h3><a class="pub-title-link" href="https://doi.org/10.1109/ICRITO.2017.8342471" rel="external noopener" target="_blank">Timing Attack Analysis on AES on Modern Processors</a></h3>
+            <p class="pub-authors"><strong>Prakhar Kaushik</strong>, Rana Majumdar</p>
             <p class="pub-meta"><span class="pub-venue">ICRITO 2017</span></p>
             <p class="pub-summary">Timing attack analysis on AES on modern processors.</p>
             <details class="pub-details">
               <summary>Abstract, links &amp; BibTeX</summary>
               <div class="details-body">
-                <div>Preprint link coming soon.</div>
+                <div><a href="https://doi.org/10.1109/ICRITO.2017.8342471" rel="external noopener" target="_blank">Conference paper</a></div>
                 <div>
                   <a class="btn btn-secondary btn-small pub-bibtex-button" href="/assets/bibliography/your_paper.bib" data-bibtex-key="kaushik2017timing">BibTeX</a>
                 </div>
@@ -1122,6 +1227,54 @@
             dialog.close();
           }
         });
+      })();
+    </script>
+    <script>
+      (function () {
+        var groups = Array.prototype.slice.call(document.querySelectorAll("[data-cofirst-order]"));
+        if (!groups.length) {
+          return;
+        }
+
+        var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+        var isReversed = false;
+
+        function reorderGroup(group) {
+          var primary = group.querySelector("[data-cofirst-primary]");
+          var peer = group.querySelector("[data-cofirst-peer]");
+          var separator = group.querySelector("[data-cofirst-separator]");
+
+          if (!primary || !peer || !separator) {
+            return;
+          }
+
+          group.replaceChildren(
+            isReversed ? peer : primary,
+            separator,
+            isReversed ? primary : peer
+          );
+        }
+
+        function flipAuthorOrder() {
+          isReversed = !isReversed;
+
+          groups.forEach(function (group) {
+            if (prefersReducedMotion.matches) {
+              reorderGroup(group);
+              return;
+            }
+
+            group.classList.add("is-flipping");
+            window.setTimeout(function () {
+              reorderGroup(group);
+              window.requestAnimationFrame(function () {
+                group.classList.remove("is-flipping");
+              });
+            }, 160);
+          });
+        }
+
+        window.setInterval(flipAuthorOrder, 5000);
       })();
     </script>
       <script src="/assets/js/publication-filters.js" defer></script>
