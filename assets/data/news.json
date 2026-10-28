@@ -1,5 +1,21 @@
 [
   {
+    "date": "2026-10-27",
+    "displayDate": "Oct 27, 2026",
+    "tag": "Paper",
+    "title": "Honeycomb-Surfels released",
+    "summary": "Compact hexagonal primitives for efficient scene rendering and reconstruction.",
+    "url": "https://honeycomb-surfels.github.io/"
+  },
+  {
+    "date": "2026-09-28",
+    "displayDate": "Sep 28, 2026",
+    "tag": "Paper",
+    "title": "FurE released",
+    "summary": "Editable 3D animal fur reconstruction without animal-fur datasets.",
+    "url": "https://toshi2k2.github.io/fure/"
+  },
+  {
     "date": "2026-06-24",
     "displayDate": "Jun 2026",
     "tag": "Talk",
@@ -40,14 +56,6 @@
     "title": "Presenting Name That Part at CVPR 2026",
     "summary": "Presenting Name That Part at CVPR 2026 in Denver.",
     "url": "https://name-that-part.github.io/"
-  },
-  {
-    "date": "2026-05-29",
-    "displayDate": "May 29, 2026",
-    "tag": "Market",
-    "title": "I am on the job market this year for research roles.",
-    "summary": "Open to research roles spanning 3D vision, efficient learning, interpretability, and robust AI.",
-    "url": "/cv/"
   },
   {
     "date": "2026-05-18",

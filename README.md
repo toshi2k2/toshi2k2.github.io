@@ -4,6 +4,19 @@ This repository contains a static, GitHub Pages–compatible personal research w
 The site is mostly plain HTML + a single shared stylesheet, with a small amount of
 JavaScript for a light/dark theme toggle and publication BibTeX viewer.
 
+The research profile brings principles from **cognitive science and cognitive
+computing** into **3D computer vision, computer graphics, and interpretable AI**.
+**3D part-based understanding** is the signature specialization. Continual
+learning, interpretable/explainable AI, and physics of AI support the goals of
+efficiency, robustness, and interpretability. Analysis by synthesis is one
+approach within this broader program. Keep this framing consistent in the
+homepage, Research page, publication summaries, and page metadata.
+The homepage biography should demonstrate this specialization through concrete
+contributions and project links, rather than listing fields of expertise alone.
+Keep the tone understated: show the distinctive connection through the work,
+without declarations such as “I lead research” or unverified comparisons with
+other researchers.
+
 ## Structure
 
 - `index.html` — Home page (hero, featured work, visibility, news, etc.).
@@ -70,19 +83,32 @@ the page is opened directly from `file://`, the fallback news items in
 
 ### 2) Add Publications
 
-Publications appear in two views (thematic + chronological) in
-`publications/index.html`, and the BibTeX modal pulls entries from
-`assets/bibliography/your_paper.bib`. Search/filter behavior and quick abstract
-injection live in `assets/js/publication-filters.js`.
+Publications use the chronological cards in `publications/index.html` as their
+canonical authoring records. Thematic copies are also kept in the HTML so the
+page works in direct-file and no-script previews. Each canonical card carries
+explicit paper-theme probabilities in `data-pub-theme-scores`. The BibTeX modal pulls entries from
+`assets/bibliography/your_paper.bib`; missing thematic-copy generation,
+probability sorting, search/filter behavior, and quick abstract injection live in
+`assets/js/publication-filters.js`.
 
 Steps:
 1) Add a BibTeX entry to `assets/bibliography/your_paper.bib`.
    The BibTeX key (e.g., `kaushik2025universalweightsubspacehypothesis`)
    must match the `data-bibtex-key` used in the HTML.
 
-2) Add a publication card to **both**:
-   - The thematic section where it belongs, and
-   - The chronological section under the correct year.
+2) Add one publication card to the chronological section under the correct
+   year. Assign every relevant theme a 1–100 editorial relevance score:
+   ```html
+   <article class="pub-item"
+            data-pub-theme-scores="efficient:98 explainable-ai:88">
+   ```
+   Available theme keys are `efficient`, `3d`, `perception`,
+   `domain-adaptation`, `explainable-ai`, `robustness`, `generative`, and
+   `security`. Scores should reflect the paper's title, abstract, method, and
+   main contribution. Thematic cards are sorted from highest to lowest score
+   and display their section-specific match. Keep static thematic copies for
+   direct-file previews; when served with JavaScript, missing copies are filled
+   and re-sorted automatically.
 
 3) For each card:
    - Use the full paper title in the `<h3>`.
@@ -123,7 +149,39 @@ The BibTeX modal logic lives inside `publications/index.html`. It reads
 5) Optional abstract/search polish:
    - Add or update the matching title rule in `assets/js/publication-filters.js`
      so the expanded card shows a concise abstract.
-   - The filter topics are inferred from title, venue, summary, and theme section.
+   - Keep theme membership and match scores explicit in
+     `data-pub-theme-scores`; do not infer them from title keywords at runtime.
+
+### Publication videos
+
+The homepage highlights Honeycomb-Surfels, FurE, and Can These Views Be One
+Scene? with locally served videos. Previews have playback controls; the
+homepage and publication lists leave playback to the reader. Use `muted`, `playsinline`, and
+`preload="metadata"`, plus a descriptive `aria-label` and a poster when available.
+Keep canonical and static thematic publication copies consistent.
+
+- `assets/video/honeycomb-surfels-preview.mp4` (4,194,320 bytes): the kitchen
+  novel-view render from the [Honeycomb-Surfels project](https://honeycomb-surfels.github.io/).
+  Its source is the public media bucket configured in the project's
+  `static/js/config.js`, key `nvs/mipnerf360/kitchen/ours.mp4`, media version 2.
+- `assets/img/publications/honeycomb-surfels-preview.jpg` (168,655 bytes):
+  the corresponding 1078×720 project poster.
+- `assets/video/fure-preview.mp4`: the existing compressed copy of the fox
+  wind animation shown on the [FurE project](https://toshi2k2.github.io/fure/#motion).
+  Reuse this web preview instead of embedding the 301 MB original.
+- `assets/img/publications/fure-preview.webp` (248,026 bytes): the project's
+  1920×1080 fox-wind poster, from `assets/images/fox-wind-poster.webp`.
+- `assets/video/can-these-views-gaussian-noise.mp4`: the existing multiview
+  consistency example; keep its current project and paper links.
+
+### Invited talks
+
+The complete selected list lives at `misc/index.html#talks`; the homepage
+summarizes 2026 university and industry hosts. The newly supplied MIT, Brown,
+Apple, Honda Research, Amazon Prime Video, Samsung Research, and Amazon AGI
+entries use the speaker-confirmed year. MIT and Apple each represent two talks.
+Add exact dates or titles only when verified; keep email addresses, calendar
+event links, and private invitation details out of the public page.
 
 ### 3) Change the Photo
 

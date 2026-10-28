@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Research | Prakhar Kaushik</title>
-    <meta name="description" content="Research stack spanning human-like perception, structured 3D semantics, analysis by synthesis, and efficient continual learning.">
+    <title>3D Vision &amp; Cognitive AI Research | Prakhar Kaushik</title>
+    <meta name="description" content="Cognitive AI research across 3D vision, computer graphics, and interpretability: part-based understanding, reconstruction, continual learning, and physics of AI.">
     <meta name="author" content="Prakhar Kaushik">
-    <meta property="og:title" content="Research | Prakhar Kaushik">
-    <meta property="og:description" content="A coherent research stack from perception to continual learning.">
+    <meta property="og:title" content="3D Vision &amp; Cognitive AI Research | Prakhar Kaushik">
+    <meta property="og:description" content="3D part-based understanding at the intersection of cognitive science and AI, with efficiency, robustness, and interpretability as central goals.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://toshi2k2.github.io/research/">
     <meta name="twitter:card" content="summary">
@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/css/research.css">
+    <link rel="stylesheet" href="/assets/css/research.css?v=academic-20261028">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>%F0%9F%A7%A0</text></svg>">
   </head>
   <body>
@@ -47,12 +47,12 @@
 
     <main id="main" class="container">
       <header class="page-header">
-        <h1>Research</h1>
-        <p>I develop a research program on human-like perception and learning through structure, efficiency, and continual adaptation rather than brute-force scale. I am on the job market this year for research roles.</p>
-        <p>Across projects, a unifying mechanism is analysis by synthesis: framing perception and learning as inverse problems where models infer latent structure by constructing and testing generative explanations.</p>
-        <p>My goal as an independent PI is to build models that connect mechanistic insight to practical systems for robust, reusable intelligence.</p>
+        <h1>3D vision &amp; cognitive AI</h1>
+        <p>My research brings ideas from cognitive science and cognitive computing into <strong>3D computer vision, computer graphics, and interpretable AI</strong>. This cognitive approach connects the structure of objects and scenes with the structure of learned representations, advancing how systems reconstruct, understand, and learn from the visual world.</p>
+        <p>A central thread is <a href="#part-based-understanding"><strong>3D part-based understanding</strong></a>: how systems represent objects through their parts, semantic meaning, and spatial relationships. My research brings this structured view of perception together with <strong>continual learning</strong>, <strong>interpretable and explainable AI</strong>, and the <strong>physics of AI</strong>, with efficiency, robustness, and interpretability as central goals.</p>
+        <p>Analysis by synthesis is one aspect of this program: constructing and testing generative explanations of visual observations. Other directions study perceptual organization, remembering and forgetting, and shared structure across learned models.</p>
         <nav class="research-jump-links" aria-label="Jump to research sections">
-          <a href="#research-stack">Research Stack</a>
+          <a href="#research-stack">Research directions</a>
           <a href="#ideas">Selected Contributions</a>
           <a href="#roadmap">Roadmap</a>
           <a href="/publications/">Publications</a>
@@ -64,41 +64,44 @@
         <path d="M700,65 C710,45 730,35 760,30" fill="none" stroke="currentColor" stroke-width="3" opacity="0.18" />
       </svg>
 
-      <section class="section stack-grid" id="research-stack">
-        <article class="stack-card">
-          <h3>Layer 1: Human-like perception (Perceptual Taxonomy)</h3>
-          <p class="label-line"><strong>Problem:</strong> Models recognize objects but fail to reason over hierarchy, attributes, and affordances.</p>
-          <p class="label-line"><strong>Key idea:</strong> A cognitively grounded taxonomy and evaluation of scene reasoning.</p>
-          <p class="label-line"><strong>Outcome:</strong> Diagnostic signals that reveal where perception breaks and how structure helps.</p>
-        </article>
+      <section class="section" id="research-stack">
+        <h2>Research directions</h2>
+        <div class="stack-grid">
+          <article class="stack-card" id="part-based-understanding">
+            <h3>3D part-based understanding</h3>
+            <p class="label-line"><strong>Focus:</strong> Understanding 3D objects through semantically meaningful parts and their relationships.</p>
+            <p class="label-line"><strong>Approach:</strong> Connect part geometry, semantic naming, and compositional representations to support human-like visual understanding.</p>
+            <p class="label-line"><strong>Selected work:</strong> <a href="https://name-that-part.github.io/" rel="external noopener" target="_blank">Name That Part</a>, structured 3D compositional models, and synthetic-to-real part understanding.</p>
+          </article>
 
-        <article class="stack-card">
-          <h3>Layer 2: Structured 3D semantics &amp; parts (Name That Part)</h3>
-          <p class="label-line"><strong>Problem:</strong> Parts are segmented without semantics or named without structure.</p>
-          <p class="label-line"><strong>Key idea:</strong> Joint part segmentation and naming as set alignment with scalable annotation.</p>
-          <p class="label-line"><strong>Outcome:</strong> Reusable, consistent part semantics that scale under constrained data.</p>
-        </article>
+          <article class="stack-card">
+            <h3>Human-like perception &amp; robust reasoning</h3>
+            <p class="label-line"><strong>Problem:</strong> Models recognize objects but fail to reason over hierarchy, attributes, and affordances.</p>
+            <p class="label-line"><strong>Key idea:</strong> Connect cognitive principles of perceptual organization with interpretable representations and diagnostic evaluation.</p>
+            <p class="label-line"><strong>Selected work:</strong> <a href="https://perceptual-taxonomy.github.io/" rel="external noopener" target="_blank">Perceptual Taxonomy</a> and <a href="https://mvp18.github.io/3d-consistency-metrics/" rel="external noopener" target="_blank">Can These Views Be One Scene?</a>.</p>
+          </article>
 
-        <article class="stack-card">
-          <h3>Layer 3: Analysis by synthesis &amp; world reconstruction</h3>
-          <p class="label-line"><strong>Problem:</strong> Perception lacks grounded 3D world models for reasoning and synthesis.</p>
-          <p class="label-line"><strong>Key idea:</strong> Analysis by synthesis pipelines that reconstruct structured 3D worlds.</p>
-          <p class="label-line"><strong>Outcome:</strong> World models that support part-level reasoning and compositional inference.</p>
-        </article>
+          <article class="stack-card">
+            <h3>Interpretable AI &amp; physics of AI</h3>
+            <p class="label-line"><strong>Focus:</strong> Understand the representations, weight geometry, and learning dynamics that shape model behavior.</p>
+            <p class="label-line"><strong>Approach:</strong> Study shared low-dimensional structure across trained models to explain how learning and adaptation work.</p>
+            <p class="label-line"><strong>Selected work:</strong> <a href="https://toshi2k2.github.io/unisub/" rel="external noopener" target="_blank">The Universal Weight Subspace Hypothesis</a>.</p>
+          </article>
 
-        <article class="stack-card">
-          <h3>Layer 4: Efficient &amp; strict continual learning (UWSH, EigenLoRAx, Share)</h3>
-          <p class="label-line"><strong>Problem:</strong> Continual adaptation is compute-heavy and prone to forgetting.</p>
-          <p class="label-line"><strong>Key idea:</strong> Shared low-dimensional update geometry for reuse, merging, and strict continual learning.</p>
-          <p class="label-line"><strong>Outcome:</strong> Sustainable adaptation that scales beyond privileged compute and data.</p>
-        </article>
+          <article class="stack-card">
+            <h3>Continual learning &amp; efficient adaptation</h3>
+            <p class="label-line"><strong>Problem:</strong> Continual adaptation is compute-heavy and prone to forgetting.</p>
+            <p class="label-line"><strong>Key idea:</strong> Shared low-dimensional update geometry for reuse, merging, and strict continual learning.</p>
+            <p class="label-line"><strong>Selected work:</strong> <a href="https://eigenlora.webflow.io/" rel="external noopener" target="_blank">EigenLoRAx</a>, <a href="https://toshi2k2.github.io/share/" rel="external noopener" target="_blank">Share</a>, and <a href="https://arxiv.org/abs/2102.11343" rel="external noopener" target="_blank">continual forgetting and remembering</a>.</p>
+          </article>
+        </div>
       </section>
 
       <section class="section" id="ideas">
         <h2>Selected Contributions and Research Ideas</h2>
         <ol class="idea-list idea-list--academic">
+          <li><span class="idea-title">3D part-based understanding.</span> Advanced structured object understanding through named 3D parts, joint segmentation and semantic alignment, and compositional representations.</li>
           <li><span class="idea-title">Universal weight geometry / shared subspaces.</span> Studied and characterized shared low-dimensional structure across trained neural models.</li>
-          <li><span class="idea-title">Named 3D parts as set alignment.</span> Proposed a scalable approach for jointly segmenting and naming 3D parts.</li>
           <li><span class="idea-title">Hierarchical perceptual diagnostics.</span> Developed a framework for evaluating compositional and structured visual reasoning.</li>
           <li><span class="idea-title">Catastrophic remembering + strict continual learning.</span> Explored dynamics of remembering/forgetting and stricter continual-learning protocols.</li>
           <li><span class="idea-title">Source-free, image-only UDA for 3D pose (3DUDA).</span> Introduced a source-free adaptation setting for 3D object pose estimation.</li>

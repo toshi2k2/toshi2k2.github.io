@@ -6,12 +6,120 @@
   var thematic = document.getElementById("pub-thematic");
   var chronological = document.getElementById("pub-chronological");
   var activeFilter = "all";
+  var filterLabels = {
+    all: "all topics",
+    "3d": "3D Vision",
+    efficient: "Efficient Learning",
+    perception: "Perception",
+    "domain-adaptation": "Domain Adaptation",
+    "explainable-ai": "Explainable AI & Physics of AI",
+    robustness: "Robustness",
+    generative: "Generative Models",
+    security: "Security & Systems"
+  };
 
   if (!thematic || !chronological) {
     return;
   }
 
+  function themeScoresFor(card) {
+    var scoreText = card.getAttribute("data-pub-theme-scores") || "";
+    var scores = {};
+
+    scoreText.trim().split(/\s+/).forEach(function (entry) {
+      var separatorIndex = entry.lastIndexOf(":");
+      if (separatorIndex === -1) {
+        return;
+      }
+      var topic = entry.slice(0, separatorIndex);
+      var score = Number(entry.slice(separatorIndex + 1));
+      if (topic && Number.isFinite(score)) {
+        scores[topic] = score;
+      }
+    });
+
+    return scores;
+  }
+
+  function decorateThemeCard(card, topic) {
+    var score = themeScoresFor(card)[topic];
+    if (!Number.isFinite(score)) {
+      return;
+    }
+
+    card.dataset.themeMatch = String(score);
+    var badge = card.querySelector(".pub-theme-match");
+    if (!badge) {
+      badge = document.createElement("p");
+      badge.className = "pub-theme-match";
+      badge.innerHTML = "<span>Theme match</span><strong></strong>";
+      var heading = card.querySelector("h3");
+      if (heading) {
+        heading.insertAdjacentElement("afterend", badge);
+      }
+    }
+
+    badge.setAttribute("aria-label", "Estimated theme matching probability: " + score + " percent");
+    var scoreNode = badge.querySelector("strong");
+    if (scoreNode) {
+      scoreNode.textContent = score + "%";
+    }
+  }
+
+  function populateThematicView() {
+    var destinations = {};
+    var existingTitles = {};
+    var sections = Array.prototype.slice.call(thematic.querySelectorAll("[data-pub-theme]"));
+
+    sections.forEach(function (section) {
+      var topic = section.getAttribute("data-pub-theme");
+      destinations[topic] = section;
+      existingTitles[topic] = Object.create(null);
+      Array.prototype.slice.call(section.querySelectorAll(".pub-item")).forEach(function (card) {
+        existingTitles[topic][textOf(card, "h3")] = true;
+      });
+    });
+
+    Array.prototype.slice.call(chronological.querySelectorAll(".pub-item[data-pub-theme-scores]")).forEach(function (card) {
+      var title = textOf(card, "h3");
+      var scores = themeScoresFor(card);
+      Object.keys(scores).forEach(function (topic) {
+        if (destinations[topic] && !existingTitles[topic][title]) {
+          var clone = card.cloneNode(true);
+          decorateThemeCard(clone, topic);
+          destinations[topic].appendChild(clone);
+          existingTitles[topic][title] = true;
+        }
+      });
+    });
+
+    sections.forEach(function (section) {
+      var topic = section.getAttribute("data-pub-theme");
+      var cards = Array.prototype.slice.call(section.querySelectorAll(".pub-item"));
+      cards.forEach(function (card) {
+        decorateThemeCard(card, topic);
+      });
+      cards.sort(function (first, second) {
+        var scoreDifference = Number(second.dataset.themeMatch) - Number(first.dataset.themeMatch);
+        return scoreDifference || textOf(first, "h3").localeCompare(textOf(second, "h3"));
+      });
+      cards.forEach(function (card) {
+        section.appendChild(card);
+      });
+    });
+  }
+
+  populateThematicView();
+
   var abstracts = [
+    {
+      match: /honeycomb-surfels/i,
+      text: "Introduces Hexels, planar hexagonal surface elements with a first-order spatial color field. They represent locally planar regions with smoothly varying appearance using fewer primitives, improving the quality-memory trade-off for novel-view synthesis, surface reconstruction, and 2D image representation."
+    },
+    {
+      match: /fure:/i,
+      text: "Recovers editable animal-fur strands from multiview images using a root-conditioned latent field and a PCA strand decoder learned from human hair. Local Gaussian Frosting cues and part priors guide the underlying body geometry. The method avoids animal-fur training datasets and substantially reduces strand-training time."
+    },
     {
       match: /universal weight subspace/i,
       text: "Shows that independently trained neural networks converge to shared, low-dimensional spectral subspaces. The result gives a geometric explanation for efficient fine-tuning, model merging, and continual learning."
@@ -38,7 +146,7 @@
     },
     {
       match: /bayesian approach to ood/i,
-      text: "Adapts compositional feature dictionaries to improve image classification robustness under domain shift, corruptions, and occlusion."
+      text: "Uses interpretable, generative compositional feature dictionaries to improve image classification robustness under domain shift, corruptions, and occlusion."
     },
     {
       match: /gaussian scenes/i,
@@ -62,7 +170,7 @@
     },
     {
       match: /catastrophic forgetting/i,
-      text: "Studies continual learning through optimal relevance mapping to reduce forgetting while preserving useful prior knowledge."
+      text: "Analyzes forgetting and remembering from a probabilistic perspective, then uses optimal relevance mapping to preserve useful prior knowledge during continual learning."
     },
     {
       match: /inemo/i,
@@ -74,11 +182,11 @@
     },
     {
       match: /learning part segmentation from synthetic animals/i,
-      text: "Studies part segmentation learned from synthetic animal data."
+      text: "Introduces synthetic animal data and a syn-to-real part-segmentation benchmark, then improves domain adaptation with class-balanced Fourier data mixing."
     },
     {
       match: /adaptive neural connections/i,
-      text: "Learns adaptive sparse neural connectivity for efficient inference."
+      text: "Learns explicit neuron-to-neuron adjacency parameters for sparse, efficient inference while exposing weight-importance structure."
     },
     {
       match: /radar as a security/i,
@@ -108,41 +216,9 @@
     return "Concise abstract unavailable; use the links below for the paper, project page, code, or BibTeX entry.";
   }
 
-  function addTopic(topics, topic) {
-    if (topics.indexOf(topic) === -1) {
-      topics.push(topic);
-    }
-  }
-
-  function inferTopics(card) {
-    var text = card.textContent.toLowerCase();
-    var title = textOf(card, "h3").toLowerCase();
-    var section = card.closest(".publication-section");
-    var sectionId = section ? section.id : "";
-    var topics = [];
-
-    if (/universal weight subspace|name that part/.test(title)) {
-      addTopic(topics, "flagship");
-    }
-    if (/3d|part|pose|scene|animal|gaussian|reconstruction|mesh|compositional/.test(text) || /robust-vision|perception/.test(sectionId)) {
-      addTopic(topics, "3d");
-    }
-    if (/lora|subspace|continual|adapter|efficient|sparsity|forgetting|incremental/.test(text) || sectionId === "theme-efficiency") {
-      addTopic(topics, "efficient");
-    }
-    if (/robust|ood|domain|adaptation|occlusion|bayesian|source-free/.test(text) || sectionId === "theme-robust-vision") {
-      addTopic(topics, "robustness");
-    }
-    if (/generative|diffusion|prompt|tridiff|gaussian scenes|text-to-image/.test(text) || sectionId === "theme-generative") {
-      addTopic(topics, "generative");
-    }
-    if (/perceptual|taxonomy|hierarchical|vision-language|cognitive/.test(text)) {
-      addTopic(topics, "cognitive");
-    }
-    if (!topics.length) {
-      addTopic(topics, "other");
-    }
-    return topics;
+  function topicsFor(card) {
+    var topics = Object.keys(themeScoresFor(card));
+    return topics.length ? topics : ["other"];
   }
 
   function enhanceCard(card) {
@@ -155,7 +231,7 @@
       detailsBody.insertBefore(abstract, detailsBody.firstChild);
     }
 
-    var topics = inferTopics(card);
+    var topics = topicsFor(card);
     card.dataset.pubTopics = topics.join(" ");
     card.dataset.pubSearch = [
       title,
@@ -178,18 +254,29 @@
   }
 
   function updateSections(container) {
-    var visibleCount = 0;
     Array.prototype.slice.call(container.querySelectorAll(".publication-section")).forEach(function (section) {
       var sectionCards = Array.prototype.slice.call(section.querySelectorAll(".pub-item"));
-      var sectionVisible = sectionCards.some(function (card) {
+      var sectionTheme = section.getAttribute("data-pub-theme");
+      var themeMatches = container !== thematic || activeFilter === "all" || sectionTheme === activeFilter;
+      var hasVisibleCard = sectionCards.some(function (card) {
         return !card.classList.contains("is-filtered-out");
       });
+      var sectionVisible = themeMatches && hasVisibleCard;
       section.classList.toggle("is-empty", !sectionVisible);
-      visibleCount += sectionCards.filter(function (card) {
-        return !card.classList.contains("is-filtered-out");
-      }).length;
     });
-    return visibleCount;
+  }
+
+  function visiblePaperCount(container) {
+    var visibleTitles = {};
+
+    Array.prototype.slice.call(container.querySelectorAll(".pub-item")).forEach(function (card) {
+      var section = card.closest(".publication-section");
+      if (!card.classList.contains("is-filtered-out") && section && !section.classList.contains("is-empty")) {
+        visibleTitles[textOf(card, "h3")] = true;
+      }
+    });
+
+    return Object.keys(visibleTitles).length;
   }
 
   function applyFilters() {
@@ -201,10 +288,10 @@
 
     updateSections(thematic);
     updateSections(chronological);
-    var visibleCount = updateSections(currentContainer());
+    var visibleCount = visiblePaperCount(currentContainer());
 
     if (countNode) {
-      var filterLabel = activeFilter === "all" ? "all topics" : activeFilter.replace("3d", "3D");
+      var filterLabel = filterLabels[activeFilter] || activeFilter;
       countNode.textContent = "Showing " + visibleCount + " paper" + (visibleCount === 1 ? "" : "s") + " in " + filterLabel + ".";
     }
     if (emptyNode) {
@@ -218,12 +305,17 @@
     searchInput.addEventListener("input", applyFilters);
   }
 
+  function setFilterState(filter) {
+    activeFilter = filter;
+    filterButtons.forEach(function (button) {
+      var isActive = button.getAttribute("data-pub-filter") === activeFilter;
+      button.setAttribute("aria-pressed", isActive ? "true" : "false");
+    });
+  }
+
   filterButtons.forEach(function (button) {
     button.addEventListener("click", function () {
-      activeFilter = button.getAttribute("data-pub-filter") || "all";
-      filterButtons.forEach(function (candidate) {
-        candidate.setAttribute("aria-pressed", candidate === button ? "true" : "false");
-      });
+      setFilterState(button.getAttribute("data-pub-filter") || "all");
       applyFilters();
     });
   });
@@ -236,6 +328,10 @@
 
   Array.prototype.slice.call(document.querySelectorAll(".pub-jump-links a")).forEach(function (link) {
     link.addEventListener("click", function () {
+      var section = document.querySelector(link.getAttribute("href"));
+      if (section && section.hasAttribute("data-pub-theme")) {
+        setFilterState(section.getAttribute("data-pub-theme"));
+      }
       window.setTimeout(applyFilters, 0);
     });
   });
