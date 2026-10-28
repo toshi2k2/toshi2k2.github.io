@@ -4,11 +4,13 @@ This repository contains a static, GitHub Pages–compatible personal research w
 The site is mostly plain HTML + a single shared stylesheet, with a small amount of
 JavaScript for a light/dark theme toggle and publication BibTeX viewer.
 
-The research profile brings principles from **cognitive science and cognitive
-computing** into **3D computer vision, computer graphics, and interpretable AI**.
-**3D part-based understanding** is the signature specialization. Continual
-learning, interpretable/explainable AI, and physics of AI support the goals of
-efficiency, robustness, and interpretability. Analysis by synthesis is one
+The research profile bridges **cognitive AI and NeuroAI** with **3D computer
+vision, computer graphics, continual learning, interpretability, and reasoning**.
+**3D part-based representation learning** is the signature specialization,
+within a broader program of human-like, structured and compositional understanding
+of the world and learned models. Continual learning, interpretable/explainable AI,
+and physics of AI support efficiency, robustness, and interpretability.
+Analysis by synthesis is one
 approach within this broader program. Keep this framing consistent in the
 homepage, Research page, publication summaries, and page metadata.
 The homepage biography should demonstrate this specialization through concrete
@@ -16,6 +18,10 @@ contributions and project links, rather than listing fields of expertise alone.
 Keep the tone understated: show the distinctive connection through the work,
 without declarations such as “I lead research” or unverified comparisons with
 other researchers.
+Show the distinctive combination through concrete contributions and welcome
+researchers interested in developing these connections. Retain the emphasis on
+first/co-first authorship, independent thinking, novelty, creativity, and ethical
+research. Do not equate independent thinking with absence of institutional support.
 
 ## Structure
 
