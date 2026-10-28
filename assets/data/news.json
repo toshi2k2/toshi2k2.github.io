@@ -16,23 +16,71 @@
     "url": "https://toshi2k2.github.io/fure/"
   },
   {
-    "date": "2026-06-24",
-    "displayDate": "Jun 2026",
+    "date": "2026-09-14",
+    "displayDate": "Sep 14, 2026",
     "tag": "Talk",
-    "title": "Research talk at Carnegie Mellon University",
-    "summary": "Gave a research talk at CMU.",
+    "title": "Research talk at Apple",
+    "summary": "Tech Talk with the multimodal AI team.",
     "url": "/misc/#talks"
   },
   {
-    "date": "2026-06-21",
-    "displayDate": "Jun 21, 2026",
+    "date": "2026-08-31",
+    "displayDate": "Aug 31, 2026",
+    "tag": "Talk",
+    "title": "Research presentation at Honda Research Institute USA",
+    "summary": "Presented my research and joined a discussion with the team.",
+    "url": "/misc/#talks"
+  },
+  {
+    "date": "2026-08-25",
+    "displayDate": "Aug 25, 2026",
+    "tag": "Talk",
+    "title": "Research talk at Apple",
+    "summary": "Presented Universal Weight Subspace, EigenLoRAx, and Name That Part.",
+    "url": "/misc/#talks"
+  },
+  {
+    "date": "2026-08-12",
+    "displayDate": "Aug 12, 2026",
+    "tag": "Talk",
+    "title": "Research talk at Brown's Serre Lab",
+    "summary": "Toward Human-Like Visual Intelligence: From 3D Parts to Universal Weight Subspaces.",
+    "url": "/misc/#talks"
+  },
+  {
+    "date": "2026-08-06",
+    "displayDate": "Aug 6, 2026",
+    "tag": "Talk",
+    "title": "Research talk at MIT's Sur Lab",
+    "summary": "Of 3D Parts and Universal Weights: What Natural Vision and Learning Can Teach Machines.",
+    "url": "/misc/#talks"
+  },
+  {
+    "date": "2026-07-21",
+    "displayDate": "Jul 21, 2026",
     "tag": "Talk",
     "title": "Research talk at Princeton's Vertaix lab",
     "summary": "Gave a research talk at Vertaix, Princeton University.",
     "url": "https://vertaix.princeton.edu/"
   },
   {
-    "date": "2026-06-20",
+    "date": "2026-06-26",
+    "displayDate": "Jun 26, 2026",
+    "tag": "Talk",
+    "title": "Research talk at Carnegie Mellon University",
+    "summary": "Gave a research talk at CMU.",
+    "url": "/misc/#talks"
+  },
+  {
+    "date": "2026-06-03",
+    "displayDate": "Jun 3-7, 2026",
+    "tag": "CVPR",
+    "title": "Presenting Name That Part at CVPR 2026",
+    "summary": "Presenting Name That Part at CVPR 2026 in Denver.",
+    "url": "https://name-that-part.github.io/"
+  },
+  {
+    "date": "2026-06",
     "displayDate": "Jun 2026",
     "tag": "Acceptance",
     "title": "Two papers accepted to ECCV 2026",
@@ -50,14 +98,6 @@
     ]
   },
   {
-    "date": "2026-06-03",
-    "displayDate": "Jun 3-7, 2026",
-    "tag": "CVPR",
-    "title": "Presenting Name That Part at CVPR 2026",
-    "summary": "Presenting Name That Part at CVPR 2026 in Denver.",
-    "url": "https://name-that-part.github.io/"
-  },
-  {
     "date": "2026-05-18",
     "displayDate": "May 18, 2026",
     "tag": "3D Evaluation",
@@ -66,19 +106,19 @@
     "url": "https://mvp18.github.io/3d-consistency-metrics/"
   },
   {
-    "date": "2026-04-15",
-    "displayDate": "Apr 2026",
+    "date": "2026-04-07",
+    "displayDate": "Apr 7, 2026",
     "tag": "Talk",
     "title": "Invited talk at Caltech Anima Lab",
-    "summary": "Talk on structured 3D perception, efficient adaptation, and human-like learning.",
+    "summary": "Of 3D Parts and Universal Weight Subspaces.",
     "url": "/misc/#talks"
   },
   {
-    "date": "2026-01-15",
-    "displayDate": "Jan 2026",
+    "date": "2026-03-07",
+    "displayDate": "Mar 7, 2026",
     "tag": "Talk",
-    "title": "Invited talk at Levin Lab, Tufts University",
-    "summary": "Universal Weight Subspace Hypothesis",
+    "title": "Spotlight presentation at WACV LENS",
+    "summary": "Presented a spotlight at the WACV LENS workshop.",
     "url": "/misc/#talks"
   },
   {
@@ -96,6 +136,14 @@
     "title": "Share paper released",
     "summary": "Shared LoRA Subspaces for Almost Strict Continual Learning released on arXiv.",
     "url": "https://toshi2k2.github.io/share/"
+  },
+  {
+    "date": "2026-01-13",
+    "displayDate": "Jan 13, 2026",
+    "tag": "Talk",
+    "title": "Invited talk at Levin Lab, Tufts University",
+    "summary": "The Universal Weight Subspace Hypothesis and its implications.",
+    "url": "/misc/#talks"
   },
   {
     "date": "2025-12-19",

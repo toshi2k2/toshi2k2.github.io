@@ -74,7 +74,7 @@ Steps:
    ```
 2) `links` is optional; use it for extra related project/paper links on the same news item.
 3) Use absolute `https://...` URLs for external links. The renderer automatically adds safe external-link attributes.
-4) Keep `date` in `YYYY-MM-DD` form so the feed sorts correctly.
+4) Use `YYYY-MM-DD` for verified dates, or `YYYY-MM` when only the month is known; do not invent a day for sorting. The feed sorts these strings in descending order.
 5) If you want the full legacy list updated, also edit `news/index.html` (old theme).
 
 The renderer lives in `assets/js/site-news.js`. If JavaScript is unavailable or
@@ -177,11 +177,17 @@ Keep canonical and static thematic publication copies consistent.
 ### Invited talks
 
 The complete selected list lives at `misc/index.html#talks`; the homepage
-summarizes 2026 university and industry hosts. The newly supplied MIT, Brown,
-Apple, Honda Research, Amazon Prime Video, Samsung Research, and Amazon AGI
-entries use the speaker-confirmed year. MIT and Apple each represent two talks.
-Add exact dates or titles only when verified; keep email addresses, calendar
-event links, and private invitation details out of the public page.
+summarizes 2026 university and industry hosts. The user-supplied talk inventory
+provides dates for Tufts (January 13), Caltech (April 7), CMU (June 26),
+Princeton (July 21), MIT/Sur Lab (August 6), Brown (August 12), Apple (August 25
+and September 14), and Honda (August 31). It also records the speaker-confirmed
+WACV LENS spotlight on March 7. All dates are in 2026; July 21 corrects the
+previous Princeton June 21 entry.
+
+The second MIT talk and Amazon Prime Video, Samsung Research, and Amazon AGI
+retain speaker-confirmed year-only dates. MIT and Apple each represent two
+talks. Add exact dates or titles only when verified; keep email addresses,
+calendar event links, and private invitation details out of the public page.
 
 ### 3) Change the Photo
 
